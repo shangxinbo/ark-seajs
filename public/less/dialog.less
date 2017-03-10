@@ -1,0 +1,591 @@
+@import (reference) "base.less";
+@import "input.less";
+
+
+.dialog-close,.dialog-bugButton i,.success .icon,.dialog-upload .icon,.dialog-table td i,.label-button i,.data-error-title i{
+  .flo();
+  background: url('@{url}/dialog-icon.png') no-repeat 0 0;
+}
+
+#shadowLayer{
+  .wh();
+  background-color: @blackColor;
+  opacity: 0.3;
+  filter:Alpha(opacity=30);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10001;
+}
+.dialog{
+  display: none;
+  border-radius: 10px;
+  background-color: @whiteColor;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 10002;
+}
+.dialog-close{
+  .wh(50px);
+  border-radius: 50%;
+  background-position: 0 0;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  .transition(transform,300ms,linear);
+  &:hover{
+    .transform(rotate(180deg));
+  }
+}
+.dialog-header{
+  padding: 28px 40px 35px;
+  height: 24px;
+  h4{
+    font-size: 20px;
+    line-height: 24px;
+    color: @grayColor;
+    span{
+      padding: 0 8px;
+    }
+  }
+}
+.dialog-body{
+  padding: 0 60px;
+  .scroll-warp{
+    max-height: 350px;
+    margin-right: -20px;
+    &.w640{
+      width: 660px;
+    }
+    &.w800{
+      width: 820px;
+    }
+  }
+  .scroll-content{
+    padding-right: 0;
+    margin-right: 20px;
+  }
+}
+.dialog-footer{
+  padding: 35px 0 55px;
+  text-align: center;
+  font-size: 0;
+  a{
+    display: inline-block;
+    width: 133px;
+    height: 48px;
+    border: 1px solid @lineColor2;
+    border-radius: 4px;
+    color: @grayColor;
+    margin: 0 8px;
+    font-size: 18px;
+    line-height: 47px;
+    &:hover{
+      box-shadow: 0 0 3px fade(@blackColor ,50%);
+    }
+    &.red{
+      background-color: @redColor;
+      color: @whiteColor;
+      border-color: @redColor;
+      &:hover{
+        background-color: lighten(@redColor,3%); //亮度增加 3%
+      }
+    }
+  }
+}
+.dialog-bugButton{
+  padding: 60px 25px;
+  a{
+    display: block;
+    width: 356px;
+    height: 68px;
+    background-color: @greenColor;
+    color: @whiteColor;
+    margin-top: 35px;
+    font-size: 26px;
+    line-height: 67px;
+    text-align: center;
+    border-radius: 10px;
+    &:first-child{
+      margin-top: 0;
+    }
+    &:hover{
+      box-shadow: 0 0 3px fade(@blackColor ,50%);
+      background-color: lighten(@greenColor,3%); //亮度增加 3%
+    }
+    span{
+      display: inline-block;
+      vertical-align: top;
+      width: 210px;
+    }
+  }
+  i{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    &.icon01{
+      width: 28px;
+      height: 20px;
+      margin-top: 25px;
+      background-position: -69px -20px;
+    }
+    &.icon02{
+      .wh(28px);
+      margin-top: 21px;
+      background-position: -72px -40px;
+    }
+    &.icon03{
+      .wh(19px);
+      margin-top: 25px;
+      background-position:-50px -17px;
+    }
+    &.icon04{
+      width: 19px;
+      height: 17px;
+      margin-top: 27px;
+      background-position:-50px 0;
+    }
+    &.icon05{
+      width: 24px;
+      height: 20px;
+      margin-top: 24px;
+      background-position:-69px 0;
+    }
+    &.icon06{
+      width: 22px;
+      height: 20px;
+      margin-top: 24px;
+      background-position:-50px -36px;
+    }
+    &.icon07{
+     .wh(18px);
+      margin-top: 25px;
+      background-position:-50px -56px;
+    }
+    &.icon08{
+      .wh(18px);
+      margin-top: 25px;
+      background-position:-50px -74px;
+    }
+    &.icon09{
+      width: 25px;
+      height: 16px;
+      margin-top: 26px;
+      background-position:-59px -119px;
+    }
+    &.icon10{
+      width: 26px;
+      height: 23px;
+      margin-top: 23px;
+      background-position:-59px -135px;
+    }
+  }
+}
+.w800{
+  .dialog-table{
+    width: 800px;
+  }
+}
+.w640{
+  .dialog-table{
+    width: 640px;
+  }
+}
+.dialog-table{
+  @thColor:#6B6B9F;
+  @trColor:#F0F1F4;
+  &.w640{
+    width: 640px;
+  }
+  &.w800{
+    width: 800px;
+  }
+  .w60{
+    width: 60px;
+  }
+  .w70{
+    width: 70px;
+  }
+  .w90{
+    width: 90px;
+  }
+  .w100{
+    width: 100px;
+    &>p{
+      width: 100px;
+    }
+  }
+  .w140{
+    width: 140px;
+    &>p{
+      width: 140px;
+    }
+  }
+  .w150{
+    width: 150px;
+    &>p{
+      width: 150px;
+    }
+  }
+  .w200{
+    width: 200px;
+    &>p{
+      width: 200px;
+    }
+  }
+  .tl{
+    text-align: left !important;
+  }
+  tr{
+    &.bg{
+      background-color: @trColor;
+    }
+  }
+  th{
+    height: 42px;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: @thColor;
+    padding: 0 10px;
+    &:first-child{
+      border-radius: 4px 0 0 4px;
+      border-radius:0\0;
+    }
+    &:last-child{
+      border-radius: 0 4px 4px 0;
+      border-radius:0\0;
+    }
+  }
+  td{
+    height: 30px;
+    color: @grayColor;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    p{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    i{
+      display: inline-block;
+      vertical-align: top;
+      .wh(19px);
+      margin: 2px auto 0;
+      background-position: -34px -100px;
+      cursor: pointer;
+      &.checked{
+        background-position: -53px -100px;
+      }
+    }
+    a{
+      color: @greenColor;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.dialog-upload,.dialog-save{
+  padding: 0 15px;
+  width: 400px;
+  position: relative;
+}
+.dialog-upload{
+  .download{
+    float: right;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: @greenColor;
+    position: absolute;
+    right: 15px;
+    top: -55px;
+    .icon{
+      float: left;
+      width: 15px;
+      height: 14px;
+      margin: 3px 8px 0 0;
+      background-position: -68px -68px;
+    }
+  }
+}
+.upload-warp{
+  width: 100%;
+  height: 48px;
+  position: relative;
+  .input-text{
+    width: 240px;
+    float: left;
+  }
+  span{
+    float: right;
+    width: 95px;
+    height: 100%;
+    text-align: center;
+    background-color: @greenColor;
+    font-size: 16px;
+    line-height: 48px;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover{
+      box-shadow: 0 0 3px fade(@blackColor ,50%);
+      background-color: lighten(@greenColor,3%);
+    }
+  }
+  img{
+    float: left;
+    margin: 15px 0 0 15px;
+  }
+  .icon{
+    float: left;
+    .wh(26px);
+    margin: 11px 0 0 15px;
+    background-position: -74px -82px;
+  }
+  a{
+    display: block;
+    width: 80px;
+    height: 30px;
+    border: 1px solid @greenColor;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 30px;
+    font-size: 14px;
+    color: @greenColor;
+    position: absolute;
+    right: -22px;
+    top: 8px;
+    &:hover{
+      box-shadow: 0 0 3px fade(@blackColor ,50%);
+    }
+  }
+}
+.success{
+  width: 370px;
+  text-align: center;
+  padding-top: 60px;
+  color: @grayColor;
+  h5{
+    height: 34px;
+    margin-bottom: 20px;
+  }
+  .icon{
+    display: inline-block;
+    vertical-align: top;
+    .wh(34px);
+    background-position: 0 -100px;
+  }
+  span{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 12px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+  p{
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  a{
+    color: @greenColor;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.dialog-public{
+  width: 446px;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  padding-top: 60px;
+  color: @grayColor;
+  span{
+    font-size: 24px;
+    padding: 0 8px;
+  }
+}
+.dialog-data-error{
+  width: 410px;
+  text-align: center;
+  padding-top: 40px;
+  color: @grayColor;
+  p{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  a{
+    color: @greenColor;
+    margin-right: 2px;
+  }
+}
+.data-error-title{
+  margin-top: 10px;
+  height: 25px;
+  font-size: 20px;
+  line-height: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  i{
+    display: inline-block;
+    vertical-align: top;
+    .wh(25px);
+    background-position: -34px -119px;
+  }
+  span{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 11px;
+  }
+}
+
+.select-block{
+  width: 414px;
+  overflow: hidden;
+  margin: 0 0 -18px -14px;
+  text-align: center;
+  a{
+    float: left;
+    width: 120px;
+    line-height: 20px;
+    border: 2px solid @lineColor3;
+    margin: 0 0 18px 14px;
+    position: relative;
+    i{
+      background: url('@{url}/select-block.png') no-repeat;
+      &.icon{
+        display: block;
+        .wh(24px);
+        margin: 10px auto 0;
+        height: 24px;
+      }
+      &.tri{
+        display: none;
+        width: 19px;
+        height: 17px;
+        background-position: -208px 0;
+        position: absolute;
+        right: -1px;
+        bottom: -1px;
+      }
+      &.gdt{
+        background-position: 0 0;
+      }
+      &.wb{
+        background-position: -24px 0;
+      }
+      &.at{
+        width: 60px;
+        background-position: -52px 0;
+      }
+      &.edm{
+        background-position: -112px 0;
+      }
+      &.dh{
+        background-position: -136px 0;
+      }
+      &.dx{
+        background-position: -160px 0;
+      }
+      &.other{
+        background-position: -184px 0;
+      }
+    }
+    span{
+      display: block;
+      font-size: 16px;
+      color: @grayColor;
+      margin-top: 8px;
+    }
+    em{
+      display: block;
+      font-size: 12px;
+      color: @grayText;
+      margin-top: 2px;
+    }
+    &:hover{
+      border-color: @greenColor;
+    }
+    &.active{
+      border-color: @greenColor;
+      i{
+        &.tri{
+          display: block;
+        }
+        &.gdt{
+          background-position: 0 -24px;
+        }
+        &.wb{
+          background-position: -24px -24px;
+        }
+        &.at{
+          background-position: -52px -24px;
+        }
+        &.edm{
+          background-position: -112px -24px;
+        }
+        &.dh{
+          background-position: -136px -24px;
+        }
+        &.dx{
+          background-position: -160px -24px;
+        }
+        &.other{
+          background-position: -184px -24px;
+        }
+      }
+    }
+  }
+}
+.dialog-external,.dialog-internal{
+  padding-left: 15px;
+  width: 450px;
+  position: relative;
+  .input-area{
+    height: 96px;
+  }
+}
+.dialog-external{
+  .select-block{
+    a{
+      height: 95px;
+    }
+  }
+}
+.dialog-internal{
+  .select-block{
+    a{
+      height: 82px;
+      i{
+        &.icon{
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+.dialog-inventory{
+  padding-left: 35px;
+  width: 450px;
+  position: relative;
+  label{
+    width: 90px;
+    left: -58px;
+  }
+}
+
+
+@media (max-width: 1366px){
+  .dialog-header{
+    padding-bottom: 30px;
+  }
+  .dialog-footer{
+    padding: 30px 0 40px;
+  }
+}

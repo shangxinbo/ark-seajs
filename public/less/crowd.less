@@ -1,0 +1,115 @@
+@import (reference) "base.less";
+
+//---------------------------------------------- 人群管理，历史样式 ------------------------------------------------------
+.main{
+  padding: 45px 60px 0;
+}
+.nav-switch{
+  padding-bottom: 15px;
+  a,h3{
+    display: inline-block;
+    font-size: 18px;
+    color:@whiteColor;
+    margin-right: 75px;
+    height: 26px;
+    line-height: 26px;
+  }
+  a{
+    &:hover{
+      color: @redColor;
+    }
+    &.active{
+      color: @redColor;
+      span{
+        position: relative;
+        border-bottom: 2px solid @redColor;
+        padding-bottom: 4px;
+        &:after{
+          display: block;
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: -7px;
+          margin-left: -4px;
+          width: 0;
+          height: 0;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 5px solid @redColor;
+        }
+      }
+    }
+  }
+}
+.com-table-null{
+  @bgColor:#292952;
+  @textColor:#8E87A5;
+  width: 100%;
+  padding: 110px 0;
+  text-align: center;
+  font-size: 16px;
+  background-color: @bgColor;
+  color: @textColor;
+  border-radius: 4px;
+}
+.general-account{
+  margin-top: 10px;
+  width: 100%;
+  th{
+    font-size: 16px;
+    color: @grayPurpleColor2;
+    font-weight: normal;
+    text-align: right;
+    padding-top: 40px;
+    padding-right: 15px;
+  }
+  td{
+    width: 51%;
+    padding-top: 40px;
+    font-size: 20px;
+  }
+}
+.general-button{
+  text-align: center;
+  margin-top: 70px;
+  font-size: 0;
+  a{
+    display: inline-block;
+    vertical-align: top;
+    width: 90px;
+    height: 40px;
+    margin: 0 15px;
+    font-size: 16px;
+    line-height: 40px;
+    color: @whiteColor;
+    border-radius: 4px;
+    background-color: @greenColor;
+    &:hover{
+      box-shadow: 0 0 3px fade(@blackColor ,50%);
+      background-color: lighten(@greenColor,3%); //亮度增加 3%
+    }
+  }
+}
+.news-table{
+  margin-top: 25px;
+}
+
+@media (max-width: 1366px){
+  .main{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .nav-switch{
+    a,h3{
+      margin-right: 40px;
+    }
+  }
+}
+
+@import "leftCentent-rightButton.less";
+.center-button{
+  padding-bottom: 20px;
+}
+@import "table.less";
+@import "page.less";
+//---------------------------------------------- 人群管理，历史样式 End ------------------------------------------------

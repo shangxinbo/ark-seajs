@@ -1,0 +1,65 @@
+{% extends 'common/layout.html' %}
+
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/css/crowd.css">
+{% endblock %}
+
+{% block main %}
+<div class="warp">
+    <div class="main">
+        <div class="nav-switch">
+            <h3>失联修复</h3>
+        </div>
+        <div class="center-button">
+            <label class="search">
+                <input type="text" />
+                <span><i class="magnifier"></i></span>
+            </label>
+            <a data-dialog="newDis"  href="javascript:void(0);"><i class="add"></i><span>上传失联信息</span></a>
+        </div>
+        <div id="com-table">
+            <table class="com-table">
+            </table>
+        </div>
+        <div class="page">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block other %}
+<script id="list" type="text/x-handlebars-template">
+    <table class="com-table">
+        <tr>
+            <th class="w16p tl">名称</th>
+            <th class="tl">信息描述</th>
+            <th class="w11p">上传人群</th>
+            <th class="w12p">开始日期</th>
+            <th class="w12p">完成日期</th>
+            <th class="w11p">匹配状态</th>
+            <th class="w9p">修复人数</th>
+            <th class="w10p">操作</th>
+        </tr>
+        {{#each rows}}
+        <tr data-id="{{id}}" data-text="{{content}}">
+            <td class="tl">{{name}}</td>
+            <td class="tl">{{desc}}</td>
+            <td>{{num}}</td>
+            <td>{{begdt}}</td>
+            <td>{{endt}}</td>
+            <td>{{stustr}}</td>
+            <td>{{repair_num}}</td>
+            <td class="edit">
+                {{#if statu}}
+                <a href="javascript:void(0);">下载</a>
+                {{/if}}
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</script>
+{% parent %}<script type="text/javascript" id="js-run" data-js="page/lost_list">seajs.use('/js/lib/run');</script>
+{% endblock %}

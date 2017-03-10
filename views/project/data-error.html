@@ -1,0 +1,28 @@
+{% extends '../common/layout.html' %}
+
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/css/label-application.css">
+{% endblock %}
+
+{% block main %}
+<div class="warp">
+    <div class="main">
+        <div class="data-error">
+            <div class="data-error-title"><i></i><span>上传数据格式有错误</span></div>
+        </div>
+    </div>
+</div>
+<script id="error-body" type="text/html">
+    {{each items as item}}
+        <dl id={{item.id}} {{if item.open}}class="open"{{/if}}>
+            <dt>{{item.classification}}，具体错误行号如下：<i></i></dt>
+            <dd>{{item.lines}}</dd>
+        </dl>
+    {{/each}}
+</script>
+{% endblock %}
+{% block other %}
+{% parent %}
+<script type="text/javascript" id="js-run" data-js="page/project_fbData_error">seajs.use('/js/lib/run');</script>
+{% endblock %}

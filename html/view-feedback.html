@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn-Hans">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title>集奥方舟</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="bookmark" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../public/css/common.css">
+    <link rel="stylesheet" type="text/css"  href="../public/css/create.css">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../public/js/lib/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="header">
+    <h1><a href="index.html" title="集奥方舟"><img src="../public/img/logo.png" width="148" height="43" alt="集奥方舟" title="集奥方舟" /></a></h1>
+    <ul class="header-content">
+        <li><a class="icon news-icon" href="news.html"><span class="icon"></span><em>5</em></a></li>
+        <li>
+            <i class="icon login-icon"></i>
+            <div class="quit">
+                <p title="Hi，Sangxinbo">Hi，Sangxinbo</p>
+                <a href="account-manage(admin).html"><i class="icon icon01"></i><span>账号管理</span></a>
+                <a href="javascript:void(0);"><i class="icon icon02"></i><span>退 出</span></a>
+            </div>
+        </li>
+        <li>
+            <i class="icon nav-icon"></i>
+            <div class="nav">
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav01"></i><span>新客营销</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav02"></i><span>存量分析</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav03"></i><span>统计分析</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav05"></i><span>人群管理</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav06"></i><span>营销分析</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav04"></i><span>帐号管理</span></a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="warp">
+    <div class="main">
+        <h2>XXXX反馈模板</h2>
+        <div class="feedback">
+            <dl class="create-warp">
+                <dd class="first">
+                    <label>第1列</label>
+                    <input class="text disabled" type="text" value="用户ID" disabled="disabled" />
+                </dd>
+            </dl>
+        </div>
+        <div class="feedback">
+            <h3>阶段1</h3>
+            <dl class="create-warp">
+                <dd>
+                    <label>第2列</label>
+                    <input class="text disabled" type="text" value="是否接通" disabled="disabled" />
+                </dd>
+            </dl>
+            <h4>转化阶段1结果</h4>
+            <dl class="create-warp">
+                <dd>
+                    <h5><span>结果值</span><span>代表含义</span></h5>
+                    <input class="text w87 disabled" type="text" value="0" disabled="disabled" />
+                    <input class="text w228 disabled" type="text" value="成功" disabled="disabled" />
+                </dd>
+            </dl>
+        </div>
+        <div class="feedback">
+            <h3>阶段2</h3>
+            <dl class="create-warp">
+                <dd>
+                    <label>第3列</label>
+                    <input class="text disabled" type="text" value="是否预约" disabled="disabled" />
+                </dd>
+            </dl>
+            <h4>转化阶段2结果</h4>
+            <dl class="create-warp">
+                <dd>
+                    <h5><span>结果值</span><span>代表含义</span></h5>
+                    <input class="text w87 disabled" type="text" value="0" disabled="disabled" />
+                    <input class="text w228 disabled" type="text" value="成功" disabled="disabled" />
+                </dd>
+                <dd>
+                    <input class="text w87 disabled" type="text" value="1" disabled="disabled" />
+                    <input class="text w228 disabled" type="text" value="失败" disabled="disabled" />
+                </dd>
+            </dl>
+        </div>
+        <div class="feedback">
+            <h3>阶段3</h3>
+            <dl class="create-warp">
+                <dd>
+                    <label>第4列</label>
+                    <input class="text disabled" type="text" value="是否进件" disabled="disabled" />
+                </dd>
+            </dl>
+            <h4>转化阶段3结果</h4>
+            <dl class="create-warp">
+                <dd>
+                    <h5><span>结果值</span><span>代表含义</span></h5>
+                    <input class="text w87 disabled" type="text" value="0" disabled="disabled" />
+                    <input class="text w228 disabled" type="text" value="成功" disabled="disabled" />
+                </dd>
+            </dl>
+            <dl class="create-warp three-create-warp">
+                <dd>
+                    <label>第5列</label>
+                    <input class="text disabled" type="text" value="内容内容" disabled="disabled" />
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div class="footer"><p>Copyright&nbsp;&copy;&nbsp;2016&nbsp;集奥聚合</p></div>
+<script type="text/javascript" src="../public/js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" >
+    $(document).ready(function(){
+        $(".header-content li").hover(function(){
+            $(this).addClass("li-hover");
+        },function () {
+            $(this).removeClass("li-hover");
+        });
+    });
+</script>
+</body>
+</html>

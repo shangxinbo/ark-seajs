@@ -1,0 +1,47 @@
+{% extends '../common/layout.html' %}
+
+{% block head %}
+{% parent %}
+<link rel="stylesheet"  href="/css/create.css">
+{% endblock %}
+
+{% block main %}
+<div class="warp">
+    <div class="main">
+    	<form action="" method="post">
+	        <h2>创建反馈模板</h2>
+	        <input class="text" id="pid" name="pid" type="text" value="1" style="display: none;"/>
+	        <input class="text" id="tid" name="tid" type="text" value="" style="display: none;"/>
+	        <input class="text" id="source" name="source" type="text" value="create" style="display: none;"/>
+	        <div class="feedback first-feedback">
+	            <dl class="create-warp">
+	                <dd>
+	                    <label>模版名称</label>
+	                    <input class="text tips" name="template_name" type="text" value="请输入模版名称" onblur="if(value==''){value='请输入模版名称';$(this).addClass('tips');}" onfocus="if(value=='请输入模版名称'){value='';$(this).removeClass('tips');}" />
+	                    <!--<input class="text" name="template_name" type="text" value="" />-->
+	                </dd>
+	            </dl>
+	        </div>
+	        <div class="feedback col">
+	            <dl class="create-warp">
+	                <dd class="first">
+	                    <label>第1列</label>
+	                    <input class="text disabled" name="level[name]" type="text" value="用户ID" readonly="readonly"/>
+	                </dd>
+	            </dl>
+	        </div>
+	        <div class="add-feedback"></div>
+	        <div class="create-button">
+	            <a class="red" id="submit" href="javascript:void(0);">提交</a>
+	            <a class="gray" href="javascript:void(0);">取消</a>
+	        </div>
+    	</form>
+    </div>
+</div>
+{% endblock %}
+
+{% block other %}
+{% parent %}
+<script type="text/javascript" id="js-run" data-js="page/create-feedback">seajs.use('/js/lib/run');</script>
+{% endblock %}
+

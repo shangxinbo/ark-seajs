@@ -1,0 +1,194 @@
+@import (reference) "base.less";
+
+//---------------------------------------------- 基础标签筛选样式 ------------------------------------------------------
+
+
+@baseTagLineColor:#3D395B;
+@baseMainBg:#292952;
+@baseMoreColor:#414164;
+
+.base-main{
+  .wh();
+  h2{
+    padding-top: 35px;
+    font-size: 20px;
+    color: @whiteColor;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+.base-tag-warp{
+  padding: 0 80px;
+  background-color:@baseMainBg;
+}
+.base-tag-item{
+  width: 100%;
+  height: 86px;
+  border-top: 1px solid @baseTagLineColor;
+  font-size: 16px;
+  overflow: hidden;
+  position: relative;
+  &:first-child{
+    border-top: none;
+  }
+  &.base-tag-show{
+    height: auto;
+  }
+  i{
+    background: url("@{url}/basetag-icon.png") no-repeat;
+    .flo();
+    position: absolute;
+  }
+  h3{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 40px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    i{
+      .wh(27px);
+      left: 0;
+      top:4px;
+      &.sex{
+        background-position: 0 0;
+      }
+      &.age{
+        background-position: 0 -27px;
+      }
+      &.area{
+        background-position: 0 -54px;
+      }
+      &.mobile{
+        background-position: 0 -81px;
+      }
+      &.interest{
+        background-position: 0 -108px;
+      }
+    }
+  }
+}
+.base-tag{
+  width: 100%;
+  padding: 25px 35px 0 110px;
+  overflow: hidden;
+  .box-sizing();
+  span{
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    padding: 0 15px;
+    margin : 0 0 25px 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    position: relative;
+    &:hover{
+      background-color: lighten(@baseMainBg,3%);
+    }
+    &.active{
+      border-color: @greenColor;
+      i{
+        .wh(18px);
+        right: -1px;
+        bottom: -1px;
+        background-position: -27px 0;
+      }
+    }
+  }
+}
+.base-tag-show{
+  .base-tag{
+    padding-bottom: 10px;
+    span{
+      margin-bottom: 15px;
+    }
+  }
+}
+.base-more{
+  display: block;
+  .wh(29px);
+  border-radius: 4px;
+  background-color: @baseMoreColor;
+  position: absolute;
+  right: 2px;
+  bottom: 28px;
+  i{
+    width: 15px;
+    height: 9px;
+    background-position: -27px -18px;
+    left: 7px;
+    top: 11px;
+  }
+  &:hover{
+    box-shadow: 0 0 3px fade(@blackColor ,50%);
+    background-color: lighten(@baseMoreColor,3%);
+  }
+}
+.base-tag-show{
+  .base-more{
+    i{
+      background-position: -42px -18px;
+    }
+  }
+}
+
+.edit-btn{
+  @btnBg:#414164;
+  text-align: center;
+  padding: 45px 0 0 0;
+  a{
+    color: @whiteColor;
+    font-size: 18px;
+    background-color: @btnBg;
+    min-width: 134px;
+    height: 49px;
+    line-height:49px;
+    margin: 0 12px;
+    display: inline-block;
+    border-radius: 5px;
+    &.active{
+      background-color: @redColor;
+    }
+    &:hover{
+      box-shadow: 0 0 3px fade(@blackColor ,50%);
+      background-color: lighten(@btnBg,3%);
+      &.active{
+        background-color: lighten(@redColor,3%);
+      }
+    }
+  }
+}
+@media (max-width: 1366px){
+  .base-tag-warp{
+    padding: 0 40px;
+  }
+  .base-tag-item{
+    height: 76px;
+    font-size: 14px;
+    h3{
+      padding-left: 35px;
+      top: 20px;
+    }
+  }
+  .base-tag{
+    padding-top: 20px;
+    padding-left: 105px;
+    span{
+      padding: 0 12px;
+      margin: 0 0 20px 10px;
+    }
+  }
+  .base-more{
+    top: 23px;
+  }
+  .base-tag-show{
+    .base-tag{
+      span{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+//---------------------------------------------- 基础标签筛选页样式 End ------------------------------------------------

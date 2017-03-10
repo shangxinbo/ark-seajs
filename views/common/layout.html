@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn-Hans">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title>集奥方舟</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="bookmark" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/common.css">
+    {% block head %}{% endblock %}
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/js/lib/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="header">
+    <h1><a href="/index.html" title="集奥方舟"><img src="/img/logo.png" width="148" height="43" alt="集奥方舟" title="集奥方舟"/></a></h1>
+    <ul class="header-content">
+        <!--<li>
+            <a class="icon news-icon" href="/users/message.html"></a>
+        </li>-->
+        <li>
+            <i class="icon login-icon"></i>
+            <div class="quit">
+                <p></p>
+                <!--<a href="/users/index.html"><i class="icon icon01"></i><span>账号管理</span></a>-->
+                <a data-quit="1" href="javascript:void(0)"><i class="icon icon02"></i><span>退 出</span></a>
+            </div>
+        </li>
+        <li>
+            <i class="icon nav-icon"></i>
+            <div class="nav">
+                <a href="javascript:void(0);" data-dialog="firstStep" class="clearStorage">
+                    <!--[if IE 8 ]><em class="icon"></em><![endif]-->
+                    <i class="icon nav01"></i><span>新客营销</span>
+                </a>
+                <a href="javascript:void(0);" data-dialog="crowd" class="clearStorage">
+                    <!--[if IE 8 ]><em class="icon"></em><![endif]-->
+                    <i class="icon nav02"></i><span>存量分析</span>
+                </a>
+                <a href="/report.html?ana=1">
+                    <!--[if IE 8 ]><em class="icon"></em><![endif]-->
+                    <i class="icon nav03"></i><span>统计分析</span>
+                </a>
+                <a href="/upload/history/index.html">
+                    <!--[if IE 8 ]><em class="icon"></em><![endif]-->
+                    <i class="icon nav05"></i><span>人群管理</span>
+                </a>
+                <a href="/project/list_new.html">
+                    <!--[if IE 8 ]><em class="icon"></em><![endif]-->
+                    <i class="icon nav06"></i><span>营销分析</span>
+                </a>
+                <a href="/users/index.html">
+                    <!--[if IE 8 ]><em class="icon"></em><![endif]-->
+                    <i class="icon nav04"></i><span>帐号管理</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+{% block main %}
+<p>This is the main content.</p>
+{% endblock %}
+<div class="footer"><p>Copyright&nbsp;&copy;&nbsp;2016-2017&nbsp;集奥聚合</p></div>
+{% include 'dialog.html' %}
+{% include '404.html' %}
+{% block other %}
+<script type="text/javascript" src="/js/lib/sea.js"></script>
+{% endblock %}
+</body>
+</html>

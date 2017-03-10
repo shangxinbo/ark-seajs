@@ -1,0 +1,164 @@
+@import (reference) "base.less";
+//---------------------------------------------- 首页样式 --------------------------------------------------------------
+body{
+  height: 100%;
+  min-height: 940px;
+}
+.index-icon{
+  display: inline-block;
+  .wh(114px);
+  vertical-align: top;
+  margin-top: 65px;
+  .transition(margin-top,300ms,linear);
+  background: url("@{url}/index-icon.png") no-repeat 0 0;
+}
+.warp{
+  height: 100%;
+  max-width: 1042px;
+  margin: 0 auto;
+  .box-sizing();
+  .displayFlex();
+  .displayFlexH();
+}
+.main{
+  width: 100%;
+}
+.index-content{
+  padding: 44px 0 0 1px;
+  overflow: hidden;
+  li{
+    .wh(348px);
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    margin: -1px 0 0 -1px;
+    position: relative;
+  }
+  .icon01{
+    background-position: 0 0;
+  }
+  .icon02{
+    background-position: -114px 0;
+  }
+  .icon03{
+    background-position: -228px 0;
+  }
+  .icon04{
+    background-position: 0 -114px;
+  }
+  .icon05{
+    background-position: -114px -114px;
+  }
+  .icon06{
+    background-position: -228px -114px;
+  }
+  h2{
+    margin-top: 28px;
+    font-size: 26px;
+    height: 30px;
+    line-height: 30px;
+  }
+  h3{
+    padding-top: 5px;
+    height: 30px;
+    font: 26px/30px @Arial;
+    color: @grayPurpleColor1;
+  }
+  p{
+    width: 300px;
+    margin: 15px auto 0;
+    font-size: 16px;
+    line-height: 30px;
+    color: @grayPurpleColor2;
+    opacity: 0;
+    filter:Alpha(opacity=0);
+    .transition(opacity,300ms,linear);
+  }
+  a{
+    display: block;
+    .wh(346px);
+    border: 1px solid @lineColor1;
+    float: left;
+    overflow: hidden;
+    color: @whiteColor;
+    &:hover{
+      .wh(344px);
+      border: 2px solid @greenColor;
+      position: absolute;
+      z-index: 2;
+      .index-icon{
+        margin-top: 32px;
+      }
+      p{
+        opacity: 1;
+        filter:Alpha(opacity=100);
+      }
+    }
+  }
+}
+@media (max-width: 1366px){
+  body{
+    min-height: 630px;
+  }
+  .index-icon{
+    .wh(72px);
+    margin-top: 32px;
+    background-image: url("@{url}/index-icon-media.png");
+  }
+  .warp{
+    width: 762px;
+  }
+  .index-content{
+    padding: 25px 0 0 2px;
+    li{
+      width: 254px;
+      height: 204px;
+    }
+    .icon02{
+      background-position: -72px 0;
+    }
+    .icon03{
+      background-position: -144px 0;
+    }
+    .icon04{
+      background-position: 0 -72px;
+    }
+    .icon05{
+      background-position: -72px -72px;
+    }
+    .icon06{
+      background-position: -144px -72px;
+    }
+    h2{
+      margin-top: 15px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 16px;
+    }
+    h3{
+      height: 22px;
+      font-size: 16px;
+      line-height: 22px;
+      padding-top: 0;
+    }
+    p{
+      width: 226px;
+      padding: 0 12px;
+      font-size: 12px;
+      line-height: 20px;
+      margin-top: 8px;
+    }
+    a{
+      width: 252px;
+      height: 202px;
+      &:hover{
+        width: 250px;
+        height: 200px;
+        .index-icon{
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+}
+//---------------------------------------------- 首页样式 End ----------------------------------------------------------

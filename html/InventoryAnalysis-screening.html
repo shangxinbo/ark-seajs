@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn-Hans">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title>集奥方舟</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="bookmark" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/tag-inventory.css">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../public/js/lib/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="header">
+    <h1><a href="index.html" title="集奥方舟"><img src="../public/img/logo.png" width="148" height="43" alt="集奥方舟" title="集奥方舟" /></a></h1>
+    <ul class="header-content">
+        <li><a class="icon news-icon" href="news.html"><span class="icon"></span><em>5</em></a></li>
+        <li>
+            <i class="icon login-icon"></i>
+            <div class="quit">
+                <p title="Hi，Sangxinbo">Hi，Sangxinbo</p>
+                <a href="account-manage(admin).html"><i class="icon icon01"></i><span>账号管理</span></a>
+                <a href="javascript:void(0);"><i class="icon icon02"></i><span>退 出</span></a>
+            </div>
+        </li>
+        <li>
+            <i class="icon nav-icon"></i>
+            <div class="nav">
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav01"></i><span>新客营销</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav02"></i><span>存量分析</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav03"></i><span>统计分析</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav05"></i><span>人群管理</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav06"></i><span>营销分析</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav04"></i><span>帐号管理</span></a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="warp">
+    <div class="main">
+        <div class="screening screening-show">
+            <h2>筛选产品类型</h2>
+            <div class="screening-left">
+                <div class="scroll-warp">
+                    <ul class="scroll-content screening-one">
+                        <li class="active">
+                            <div class="sort-first" title="出国金融产品"><i class="icon icon102001"></i><span>出国金融产品</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="贷款产品"><i class="icon icon102002"></i><span>贷款产品</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="投资理财产品"><i class="icon icon102003"></i><span>投资理财产品</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="screening-right">
+                <div class="scroll-warp">
+                    <ul class="scroll-content screening-item">
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>境外游</span></p>
+                            <p class="piece"><em style="width: 100%;"><span>1473人</span></em></p>
+                        </li>
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>外汇投资</span></p>
+                            <p class="piece"><em style="width: 59.4%;"><span>875人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>出国留学留学</span></p>
+                            <p class="piece"><em style="width: 23.2%;"><span>342人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>投资移民留学留学</span></p>
+                            <p class="piece"><em style="width: 6.7%;"><span>98人</span></em></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="all-button">
+                    <p class="text"><i class="icon"></i><span>全选</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="screening">
+            <h2>筛选权益偏好</h2>
+            <div class="screening-left">
+                <div class="scroll-warp">
+                    <ul class="scroll-content screening-one">
+                        <li>
+                            <div class="sort-first" title="在线购物"><i class="icon icon103001"></i><span>在线购物</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="生活服务"><i class="icon icon103002"></i><span>生活服务</span></div>
+                        </li>
+                        <li class="active">
+                            <div class="sort-first" title="休闲娱乐"><i class="icon icon103003"></i><span>休闲娱乐</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="交通出行"><i class="icon icon103004"></i><span>交通出行</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="时尚丽人"><i class="icon icon103005"></i><span>时尚丽人</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="screening-right">
+                <div class="scroll-warp">
+                    <ul class="scroll-content screening-item">
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>演出票务</span></p>
+                            <p class="piece"><em style="width: 100%;"><span>1473人</span></em></p>
+                        </li>
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>运动健身</span></p>
+                            <p class="piece"><em style="width: 59.4%;"><span>875人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>影视视频</span></p>
+                            <p class="piece"><em style="width: 23.2%;"><span>342人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>在线音乐</span></p>
+                            <p class="piece"><em style="width: 6.7%;"><span>98人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>在线阅读</span></p>
+                            <p class="piece"><em style="width: 6.7%;"><span>98人</span></em></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="all-button">
+                    <p class="text"><i class="icon"></i><span>全选</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="screening">
+            <h2>筛选渠道</h2>
+            <div class="screening-left">
+                <div class="scroll-warp">
+                    <ul class="scroll-content screening-one">
+                        <li>
+                            <div class="sort-first" title="综合旅游"><i class="icon icon104001"></i><span>综合旅游</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="酒店"><i class="icon icon104002"></i><span>酒店</span></div>
+                        </li>
+                        <li class="active">
+                            <div class="sort-first" title="打车租车"><i class="icon icon104003"></i><span>打车租车</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="航空"><i class="icon icon104004"></i><span>航空</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="汽车保养维修"><i class="icon icon104005"></i><span>汽车保养维修</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="外卖团购"><i class="icon icon104006"></i><span>外卖团购</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="音乐"><i class="icon icon104007"></i><span>音乐</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="视频"><i class="icon icon104008"></i><span>视频</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="阅读"><i class="icon icon104009"></i><span>阅读</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="美图美拍"><i class="icon icon104010"></i><span>美图美拍</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="演出票务"><i class="icon icon104011"></i><span>演出票务</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="母婴用品"><i class="icon icon104012"></i><span>母婴用品</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="装修"><i class="icon icon104013"></i><span>装修</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="综合商城"><i class="icon icon104014"></i><span>综合商城</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="海淘"><i class="icon icon104015"></i><span>海淘</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="screening-right">
+                <div class="scroll-warp">
+                    <ul class="scroll-content screening-item">
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>滴滴出行</span></p>
+                            <p class="piece"><em style="width: 100%;"><span>1473人</span></em></p>
+                        </li>
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>神州租车</span></p>
+                            <p class="piece"><em style="width: 82.1%;"><span>1209人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>Uber优步</span></p>
+                            <p class="piece"><em style="width: 74%;"><span>1090人</span></em></p>
+                        </li>
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>易到用车</span></p>
+                            <p class="piece"><em style="width: 66.5%;"><span>980人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>首汽租车</span></p>
+                            <p class="piece"><em style="width: 61%;"><span>898人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>一嗨租车</span></p>
+                            <p class="piece"><em style="width: 41.1%;"><span>606人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>快的打车</span></p>
+                            <p class="piece"><em style="width: 20.4%;"><span>300人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>神州租车</span></p>
+                            <p class="piece"><em style="width: 14.2%;"><span>209人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>PP租车</span></p>
+                            <p class="piece"><em style="width: 6.7%;"><span>98人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>嘀嗒拼车</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="all-button">
+                    <p class="text"><i class="icon"></i><span>全选</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="screening">
+            <h2>筛选地域</h2>
+            <div class="screening-right screening-right-all">
+                <div class="scroll-warp">
+                    <ul class="scroll-content screening-item">
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>河北</span></p>
+                            <p class="piece"><em style="width: 100%;"><span>1473人</span></em></p>
+                        </li>
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>山东</span></p>
+                            <p class="piece"><em style="width: 82.1%;"><span>1209人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>辽宁</span></p>
+                            <p class="piece"><em style="width: 74%;"><span>1090人</span></em></p>
+                        </li>
+                        <li class="checked">
+                            <p class="text"><i class="icon"></i><span>黑龙江</span></p>
+                            <p class="piece"><em style="width: 66.5%;"><span>980人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>吉林</span></p>
+                            <p class="piece"><em style="width: 61%;"><span>898人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>甘肃</span></p>
+                            <p class="piece"><em style="width: 41.1%;"><span>606人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>青海</span></p>
+                            <p class="piece"><em style="width: 20.4%;"><span>300人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>河南</span></p>
+                            <p class="piece"><em style="width: 14.2%;"><span>209人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>江苏</span></p>
+                            <p class="piece"><em style="width: 6.7%;"><span>98人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>湖北</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>湖南</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>江西</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>浙江</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>广东</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>云南</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>福建</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>海南</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>山西</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>四川</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>陕西</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>贵州</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>安徽</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>重庆</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>北京</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>上海</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>天津</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>广西</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>内蒙古</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>西藏</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>新疆</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                        <li>
+                            <p class="text"><i class="icon"></i><span>宁夏</span></p>
+                            <p class="piece"><em style="width: 2%;"><span>30人</span></em></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="screening-assets">
+                    <h2>筛选资产</h2>
+                    <ul>
+                        <li class="checked"><p class="text"><i class="icon"></i><span>有房产</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>有私家车</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>有子女</span></p></li>
+                    </ul>
+                    <!--<h4 class="first-child">房产</h4>
+                    <div class="select-warp">
+                        <p>请选择</p>
+                        <ul>
+                            <li>有房产</li>
+                            <li>无房产</li>
+                        </ul>
+                    </div>
+                    <h4>私家车</h4>
+                    <div class="select-warp">
+                        <p>请选择</p>
+                        <ul>
+                            <li>有私家车</li>
+                            <li>无私家车</li>
+                        </ul>
+                    </div>
+                    <h4>子女</h4>
+                    <div class="select-warp">
+                        <p>请选择</p>
+                        <ul>
+                            <li>有子女</li>
+                            <li>无子女</li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="screening">
+            <h2>导出客户上网行为</h2>
+            <div class="screening-time">
+                <div class="select-warp">
+                    <p>最近7天</p>
+                    <ul>
+                        <li>最近7天</li>
+                        <li>最近7天</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="screening-left">
+                <div class="scroll-warp">
+                    <ul class="scroll-content screening-one">
+                        <li>
+                            <div class="sort-first" title="商旅类"><i class="icon icon106001"></i><span>商旅类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="汽车类"><i class="icon icon106002"></i><span>汽车类</span></div>
+                        </li>
+                        <li class="active">
+                            <div class="sort-first" title="金融类"><i class="icon icon106003"></i><span>金融类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="新闻类"><i class="icon icon106004"></i><span>新闻类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="生活娱乐类"><i class="icon icon106005"></i><span>生活娱乐类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="生活服务类"><i class="icon icon106006"></i><span>生活服务类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="社交类"><i class="icon icon106007"></i><span>社交类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="母婴类"><i class="icon icon106008"></i><span>母婴类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="健身医疗类"><i class="icon icon106009"></i><span>健身医疗类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="教育类"><i class="icon icon106010"></i><span>教育类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="房产家居类"><i class="icon icon106011"></i><span>房产家居类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="数码类"><i class="icon icon106012"></i><span>数码类</span></div>
+                        </li>
+                        <li>
+                            <div class="sort-first" title="电商类"><i class="icon icon106013"></i><span>电商类</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="screening-right">
+                <div class="scroll-warp">
+                    <ul class="scroll-content screening-item">
+                        <li class="checked"><p class="text"><i class="icon"></i><span>汽车论坛</span></p></li>
+                        <li class="checked"><p class="text"><i class="icon"></i><span>二手车</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>违章查询</span></p></li>
+                        <li class="checked"><p class="text"><i class="icon"></i><span>保养维修</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>试乘试驾</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>汽车改装</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>自驾游</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>陪驾代驾</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>摇号</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>电商团购</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>汽车品牌</span></p></li>
+                        <li><p class="text"><i class="icon"></i><span>汽车筛选</span></p></li>
+                    </ul>
+                </div>
+                <div class="all-button">
+                    <p class="text"><i class="icon"></i><span>全选</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="cart-warp">
+            <h3>已选择</h3>
+            <div class="scroll-warp">
+                <div class="scroll-content">
+                    <ul class="select-center">
+                        <li>
+                            <h4>产品类型：</h4>
+                            <em>全选</em>
+                        </li>
+                        <li>
+                            <h4>产品类型：</h4>
+                            <p><span>境外游</span><i class="icon"></i></p>
+                            <p><span>外汇投资</span><i class="icon"></i></p>
+                        </li>
+                        <li>
+                            <h4>权益偏好：</h4>
+                            <p><span>演出票务</span><i class="icon"></i></p>
+                            <p><span>运动健身</span><i class="icon"></i></p>
+                        </li>
+                        <li>
+                            <h4>渠道：</h4>
+                            <p><span>滴滴出行</span><i class="icon"></i></p>
+                            <p><span>神州租车</span><i class="icon"></i></p>
+                            <p><span>易到用车</span><i class="icon"></i></p>
+                        </li>
+                        <li>
+                            <h4>地域：</h4>
+                            <p><span>北京</span><i class="icon"></i></p>
+                            <p><span>天津</span><i class="icon"></i></p>
+                            <p><span>山西</span><i class="icon"></i></p>
+                            <p><span>河北</span><i class="icon"></i></p>
+                        </li>
+                        <li class="active">
+                            <h4>资产：</h4>
+                            <p><span>有房产</span><i class="icon"></i></p>
+                            <p><span>有私家车</span><i class="icon"></i></p>
+                            <p><span>有子女</span><i class="icon"></i></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="select-number"><em>已选客户</em><span class="load"><b>3,643,342</b><i></i></span></div>
+            <div class="billing">
+                <a class="prev" href="javascript:void(0);">上一步</a>
+                <a href="javascript:void(0);">跳过</a>
+                <a class="red disabled" href="javascript:void(0);" onclick="getWindow('dialog01');">保存</a>
+                <a class="red next" href="javascript:void(0);">下一步</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer"><p>Copyright&nbsp;&copy;&nbsp;2016&nbsp;集奥聚合</p></div>
+
+<!-- 创建存量分析项目弹窗 -->
+<div class="dialog" id="dialog01">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>创建存量分析项目</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-inventory">
+            <ul class="input-warp">
+                <li>
+                    <label>项目名称</label>
+                    <input class="input-text error" type="text" />
+                    <p class="error"><i></i><span>用户名错误</span></p>
+                </li>
+                <li>
+                    <label>项目负责人</label>
+                    <input class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>描述</label>
+                    <textarea class="input-area"></textarea>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">提交</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 创建存量分析项目弹窗 End -->
+
+<script type="text/javascript" src="../public/js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../public/js/lib/scrollBar.js"></script>
+<script type="text/javascript" >
+    $(document).ready(function(){
+        $(".header-content li").hover(function(){
+            $(this).addClass("li-hover");
+        },function () {
+            $(this).removeClass("li-hover");
+        });
+        $(".billing a").click(function () {
+            var show = $(".screening-show");
+            if ( $(this).hasClass("prev")){
+                if( show.prev().hasClass("screening")){
+                    show.removeClass("screening-show").prev(".screening").addClass("screening-show");
+                }
+            }
+            if ($(this).hasClass("next")){
+                if( show.next().hasClass("screening")){
+                    show.removeClass("screening-show").next(".screening").addClass("screening-show");
+                }
+            }
+        });
+        $(".scroll-warp").scrollBar();
+    });
+    function getWindow(id) {
+        if($('#shadowLayer').length == 0){
+            showDialog(id);
+        }else{
+            $(".dialog").hide();
+            var ids = $("#" + id);
+            var idH = -(ids.height()/2);
+            var idW = -(ids.width()/2);
+            ids.show().css({ "margin-left": idW,"margin-top": idH });
+        }
+        $("#"+id+" .dialog-close").click(function () {
+            hideDialog(id);
+        });
+        $("#shadowLayer").click(function () {
+            hideDialog(id);
+        });
+    }
+    function hideDialog(id){
+        $("#"+id).hide();
+        $("#shadowLayer").remove();
+    }
+    function showDialog(id){
+        var ids = $("#" + id);
+        var idH = -(ids.height()/2);
+        var idW = -(ids.width()/2);
+        $('<div id="shadowLayer"></div>').appendTo("body").show();
+        ids.show().css({ "margin-left": idW,"margin-top": idH });
+    }
+</script>
+</body>
+</html>

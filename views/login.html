@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn-Hans">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title>集奥方舟</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="bookmark" href="favicon.ico">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/js/lib/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main">
+    <h2><img src="/img/logo-login.png" width="189" height="58" alt="集奥方舟" title="集奥方舟"></h2>
+    <ul>
+        <li>
+            <i class="head"></i>
+            <input autocomplete="off" type="text" id="username">
+        </li>
+        <li>
+            <i class="password"></i>
+            <input  autocomplete="new-password" type="password" id="password">
+        </li>
+        <li class="reminder" id="reminder">
+
+        </li>
+        <li>
+            <button id="input1" type="submit">登录</button>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="/js/lib/sea.js"></script>
+<script type="text/javascript" id="js-run" data-js="page/login">seajs.use('/js/lib/run');</script>
+</body>
+</html>

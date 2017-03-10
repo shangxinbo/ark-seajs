@@ -1,0 +1,245 @@
+{% extends 'common/layout.html' %}
+
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/css/result.css">
+{% endblock %}
+
+{% block main %}
+<div class="warp">
+    <div class="main">
+        <div class="filters"></div>
+        <div class="center-button">
+            <p class="number"><span>已选客户</span><em></em></p>
+            <!--<a style="display: none;" data-save="1" href="javascript:void(0);"><i class="save"></i><span>保存</span></a>
+            <a style="display: none;opacity: 0;filter:alpha(opacity=0);"><i class="add"></i><span>创建营销项目</span></a>-->
+        </div>
+        <div class="line-chart">
+            <div id="chart-line" class="chart-warp">
+            </div>
+            <div class="line-legend">
+                <div class="select-warp">  <!-- 在div上加上class（select-open）显示出ul列表 -->
+                    <p>客户量</p>
+                    <ul>
+                        <li data-group="default">客户量</li>
+                        <li data-group="sex">性别比例</li>
+                        <li data-group="age">年龄分布</li>
+                        <li data-group="area">地域分布</li>
+                        <li data-group="mobile">手机品牌</li>
+                    </ul>
+                </div>
+                <ul class="line-legend-item">
+                </ul>
+            </div>
+        </div>
+        <div id="loading" style="width: 100%;"><img style="display: block;margin: 60px auto;" src="/img/load.gif"/>
+        </div>
+        <div class="two-charts-alter" style="display: none;">
+            <div class="chart-warp">
+                <h2>性别比例</h2>
+                <div id="genders" style="width: 100%;height: 100%;"></div>
+            </div>
+            <div class="chart-warp">
+                <h2>地域分布</h2>
+                <div id="areas" style="width: 100%;height: 100%;"></div>
+            </div>
+        </div>
+        <div class="two-charts" style="display: none;">
+            <div class="chart-warp">
+                <h2>年龄分布</h2>
+                <div class="age-distribution"></div>
+            </div>
+            <div class="chart-warp">
+                <h2>手机品牌</h2>
+                <div id="chart-mobile"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block other %}
+<!-- 保存筛选条件弹窗 -->
+<div id="savepeople" class="dialog">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>保存筛选条件</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-save">
+            <ul class="input-warp">
+                <li>
+                    <label>名称</label>
+                    <input name="name" class="input-text" type="text"/>
+                </li>
+                <li>
+                    <label>描述</label>
+                    <textarea name="des" class="input-area"></textarea>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">提交</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 保存筛选条件弹窗 End -->
+
+<!-- 保存成功弹窗 -->
+<div id="save_result" class="dialog">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-body">
+        <div class="success">
+            <h5><i class="icon"></i><span>筛选条件保存成功</span></h5>
+            <p>您可以到“人群管理”—“<a href="/template.html">筛选历史</a>”中查看</p>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">完成</a>
+    </div>
+</div>
+<!-- 保存成功弹窗 End -->
+
+<!-- 保存筛选条件弹窗 -->
+<div id="api" class="dialog">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>对接内部平台</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-internal">
+            <ul class="input-warp">
+                <li>
+                    <label>项目名称</label>
+                    <input class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>项目描述</label>
+                    <textarea class="input-area"></textarea>
+                </li>
+                <li>
+                    <label>营销渠道</label>
+                    <div class="select-block">
+                        <a class="active" href="javascript:void(0);"><i class="icon dx"></i><i class="tri"></i><span>短信平台</span></a>
+                        <a href="javascript:void(0);"><i class="icon dh"></i><i class="tri"></i><span>外呼平台</span></a>
+                        <a href="javascript:void(0);"><i class="icon other"></i><i class="tri"></i><span>其他业务平台</span></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确定</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<div id="usecase" class="dialog">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>对接外部营销渠道</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-external">
+            <ul class="input-warp">
+                <li>
+                    <label>项目名称</label>
+                    <input class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>项目描述</label>
+                    <textarea class="input-area"></textarea>
+                </li>
+                <li>
+                    <label>营销渠道</label>
+                    <div class="select-block">
+                        <a class="active" href="javascript:void(0);"><i class="icon gdt"></i><i class="tri"></i><span>广点通</span><em></em></a>
+                        <a href="javascript:void(0);"><i class="icon wb"></i><i class="tri"></i><span>微博</span><em></em></a>
+                        <a href="javascript:void(0);"><i class="icon at"></i><i class="tri"></i><span>爱投DSP</span><em></em></a>
+                        <a href="javascript:void(0);"><i class="icon edm"></i><i class="tri"></i><span>EDM营销</span><em></em></a>
+                        <a href="javascript:void(0);"><i class="icon dh"></i><i class="tri"></i><span>电话营销</span><em></em></a>
+                        <a href="javascript:void(0);"><i class="icon dx"></i><i class="tri"></i><span>短信营销</span><em></em></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确定</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 保存筛选条件弹窗 End -->
+
+<script id="filter_nav" type="text/html">
+    <div class="filters-content">
+        <div class="filters-item first">
+            <h3>上传人群：</h3>
+            {{if crowd&&crowd.name}}
+            <span data-crowdid="{{crowd.id}}">{{crowd.name}}<i class="delete"></i></span><i data-dialog="crowd" data-crowdType="1" class="modify" data-href="upload"></i>
+            {{else}}
+            <a href="javascript:void(0);" data-dialog="crowd" data-crowdType="1">点击筛选</a>
+            {{/if}}
+        </div>
+        <div class="last-two">
+            <div class="filters-item second">
+                <h3>标签筛选：</h3>
+                {{each baskets as item i}}
+                <span data-basketid="{{index?index:0}}" title="{{item.title}}">{{item.text}}<i class="delete"></i></span>
+                {{/each}}
+                {{each filters as item i}}
+                    {{each item as fi}}
+                    <span data-tagid="{{fi.code}}">{{fi.text}}<i class="delete"></i></span>
+                    {{/each}}
+                {{/each}}
+                {{if showFilterBtn}}
+                <a href="/filter/index.html">点击筛选</a>
+                {{else}}
+                <i class="modify" data-href="filter"></i>
+                {{/if}}
+            </div>
+            <div class="filters-item third">
+                <h3>建模筛选：</h3>
+                {{if ucmodel}}
+                <span data-model="{{ucmodel.id}}">{{ucmodel.name}}<i class="delete"></i></span>
+                <i class="modify" data-href="model"></i>
+                {{else}}
+                <a href="/modeling-screening.html">点击筛选</a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    <div class="filters-history">
+        <a href="javascript:void(0);" data-dialog="filterList"><i></i><span>使用历史筛选</span></a>
+    </div>
+</script>
+<script id="histogram1" type="text/html">
+    <ul class="chart-histogram">
+        {{each lists as item}}
+        <li>
+            <h3>{{item.index}}</h3>
+            <div class="histogram num-outside"><p style="width:{{item.value}}%;"></p><span>{{item.value}}<em>%</em></span></div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script id="histogram2" type="text/html">
+    <ul class="chart-histogram">
+        {{each lists as item}}
+        <li>
+            <h3>{{item.name}}</h3>
+            <div class="histogram num-inside" style="width:{{item.value}}%;"><span>{{item.value}}<em>%</em></span></div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script id="buttons" type="text/html">
+    <div class="center-button">
+        <p class="number"><span>客户规模</span><em></em></p>
+        <a data-dialog="filter" href="javascript:void(0);"><i class="filter"></i><span>筛选人群</span></a>
+    </div>
+</script>
+<script id="legend" type="text/html">
+    <ul class="line-legend-item">
+        {{each legend as item}}
+        <li class="checked" data-id="{{item.id}}"><i class="icon"></i><em style="background-color:{{item.color}}"></em><span>{{item.name}}</span></li>
+        {{/each}}
+    </ul>
+</script>
+{% parent %}<script type="text/javascript" src="/js/lib/echarts.min.js"></script>
+<script type="text/javascript" id="js-run" data-js="page/report">seajs.use('/js/lib/run');</script>
+{% endblock %}

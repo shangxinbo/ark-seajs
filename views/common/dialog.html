@@ -1,0 +1,317 @@
+<!-- 上传人群弹窗 -->
+<div class="dialog" id="crowd">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-body">
+        <div class="dialog-bugButton">
+            <a data-dialog="newCrowd" href="javascript:void(0);">
+                <i class="icon03"></i>
+                <span>上传新人群</span>
+            </a>
+            <a data-dialog="listCrowd" href="javascript:void(0);">
+                <i class="icon04"></i>
+                <span>历史上传</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- 上传人群弹窗 End -->
+
+<!-- 上传新人群弹窗 -->
+<div class="dialog" id="newCrowd">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header">
+        <h4>上传新人群</h4>
+    </div>
+    <div class="dialog-body">
+        <div class="dialog-upload">
+            <a class="download" href="javascript:void(0);"><i class="icon"></i>下载模版</a>
+            <ul class="input-warp">
+                <li>
+                    <label>名称</label>
+                    <input class="input-text" name="name" type="text" />
+                </li>
+                <li>
+                    <label>描述</label>
+                    <textarea class="input-area" name="desc"></textarea>
+                </li>
+                <li>
+                    <label>上传</label>
+                    <div class="upload-warp">
+                        <input class="input-text" name="label" type="text" disabled="disabled" title="" />
+                        <span class="upbtn">上传</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">提交</a>
+        <a class="closeDialog" href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 上传新人群弹窗 End -->
+
+<!-- 历史上传人群弹窗 -->
+<div class="dialog" id="listCrowd">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header">
+        <h4>历史上传人群</h4>
+    </div>
+    <div class="dialog-body w800">
+        <table class="dialog-table w800">
+            <tr>
+                <th class="w60 first">&nbsp;</th>
+                <th class="w150">名称</th>
+                <th>描述</th>
+                <th class="w100">客户数</th>
+                <th class="w100 last">上传日期</th>
+            </tr>
+        </table>
+        <div class="scroll-warp w800">
+            <table class="scroll-content dialog-table">
+
+            </table>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">使用</a>
+        <a class="closeDialog" href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 历史上传人群弹窗 End -->
+
+<!-- 上传失联弹窗 -->
+<div class="dialog" id="newDis">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header">
+        <h4>上传失联信息</h4>
+    </div>
+    <div class="dialog-body">
+        <div class="dialog-upload">
+            <a class="download" href="javascript:void(0)"><i class="icon"></i>下载模版</a>
+            <ul class="input-warp">
+                <li>
+                    <label>名称</label>
+                    <input class="input-text" name="name" type="text" />
+                </li>
+                <li>
+                    <label>描述</label>
+                    <textarea class="input-area" name="desc"></textarea>
+                </li>
+                <li>
+                    <label>上传</label>
+                    <div class="upload-warp">
+                        <input class="input-text" name="label" type="text" disabled="disabled" title="" />
+                        <span class="upbtn">上传</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">提交</a>
+        <a class="closeDialog" href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 上传失联弹窗 End -->
+
+<!-- 筛选人群弹窗 -->
+<div class="dialog" id="filter">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-body">
+        <div class="dialog-bugButton">
+            <a href="javascript:void(0);" data-dialog="newFilter">
+                <i class="icon03"></i>
+                <span>新建筛选</span>
+            </a>
+            <a href="javascript:void(0);" data-dialog="filterList">
+                <i class="icon04"></i>
+                <span>使用历史筛选</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- 筛选人群弹窗 End -->
+
+<!-- 新建筛选弹窗 -->
+<div class="dialog" id="newFilter">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-body">
+        <div class="dialog-bugButton">
+            <a href="javascript:void(0);" data-dialog="crowd" data-crowdType="1">
+                <i class="icon05"></i>
+                <span>上传人群</span>
+            </a>
+            <a href="/filter/index.html">
+                <i class="icon01"></i>
+                <span>标签筛选</span>
+            </a>
+            <a href="/modeling-screening.html">
+                <i class="icon02"></i>
+                <span>建模筛选</span>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- 新建筛选弹窗 End -->
+
+<!-- 筛选历史弹窗 -->
+<div class="dialog" id="filterList">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header">
+        <h4>筛选历史</h4>
+    </div>
+    <div class="dialog-body">
+        <table class="dialog-table w800">
+            <tr>
+                <th class="w60">&nbsp;</th>
+                <th class="w140 tl">名称</th>
+                <th class="w200 tl">描述</th>
+                <th class="w200 tl">筛选条件</th>
+                <th class="w100">上传日期</th>
+            </tr>
+        </table>
+        <div class="scroll-warp w800">
+            <table class="scroll-content dialog-table">
+            </table>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">使用</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 筛选历史弹窗 End -->
+
+<div class="dialog" id="feedbackList">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header">
+        <h4>历史反馈模板</h4>
+    </div>
+    <div class="dialog-body w800">
+        <table class="dialog-table w800">
+            <tr>
+                <th class="w60 first">&nbsp;</th>
+                <th class="w100">名称</th>
+                <th>阶段数</th>
+                <th class="w100">阶段名称</th>
+                <th class="w100 last">上传日期</th>
+                <th class="w100">操作</th>
+            </tr>
+        </table>
+        <div class="scroll-warp w800">
+            <table class="scroll-content dialog-table">
+            </table>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">使用</a>
+        <a class="closeDialog" href="javascript:void(0);">取消</a>
+    </div>
+</div>
+
+<!-- 公共alert -->
+<div id="alert" class="dialog">
+    <div class="dialog-body">
+        <div class="success">
+            <h5>
+                <span></span>
+            </h5>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确认</a>
+    </div>
+</div>
+<!-- 公共alert end -->
+
+<!-- 公共errorAlert -->
+<div class="dialog" id="errorAlert">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-body">
+        <div class="dialog-data-error">
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">查看错误详情</a>
+    </div>
+</div>
+<!-- 公共errorAlert end -->
+
+<!-- 公共confirm -->
+<div id="confirm" class="dialog">
+    <div class="dialog-body">
+        <div class="success">
+            <h5>
+                <span></span>
+            </h5>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确认</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 公共confirm end -->
+
+<!-- 存量分析入口弹窗 -->
+<div class="dialog" id="firstStep">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-body">
+        <div class="dialog-bugButton">
+            <a class="product" href="javascript:void(0);"><i class="icon04"></i><span>产品类型</span></a>
+            <a class="preference" href="javascript:void(0);"><i class="icon10"></i><span>权益偏好</span></a>
+        </div>
+    </div>
+</div>
+<!-- 存量分析入口弹窗 End -->
+
+<script id="T_crowdList" type="text/html">
+    {{each rows as item i}}
+    <tr data-id="{{item.id}}" data-name="{{item.uploadName}}" {{if i%2 > 0}}class="bg"{{/if}} >
+        <td class="w60">
+            <i></i>
+        </td>
+        <td class="w150 tl">{{item.uploadName}}</td>
+        <td class="">{{item.uploadDesc}}</td>
+        <td class="w100">{{item.lines}}</td>
+        <td class="w100">{{item.createTime}}</td>
+    </tr>
+    {{/each}}
+</script>
+<script id="T_filterList" type="text/html">
+    {{each rows as item i}}
+    <tr data-id="{{item.id}}" data-content="{{item.content}}" {{if i%2 > 0}}class="bg"{{/if}} data-name="{{item.name}}">
+        <td class="w60">
+            <i></i>
+        </td>
+        <td class="w140 tl">
+            <p title="{{item.name}}">{{item.name}}</p>
+        </td>
+        <td class="w200 tl">
+            <p title="{{item.desc}}">{{item.desc}}</p>
+        </td>
+        <td class="w200 tl">
+            <p title="{{item.content | content}}">
+                {{item.content | content}}
+            </p>
+        </td>
+        <td class="w100">{{item.createTime}}</td>
+    </tr>
+    {{/each}}
+</script>
+<script id="T_feedbackList" type="text/html">
+    {{each rows as item i}}
+    <tr data-id="{{item.templateId}}" {{if i%2 > 0}}class="bg" {{/if}} data-name="{{item.templateName}}">
+        <td class="w60">
+            <i></i>
+        </td>
+        <td class="w100">{{item.templateName}}</td>
+        <td>{{item.levelNum}}</td>
+        <td class="w100" title="{{item.levelName | bigNum}}">{{item.levelName | bigNum}}</td>
+        <td class="w100">{{item.createTime}}</td>
+        <td class="w100"><a class="use" href="javascript:void(0);">预览</a></td>
+    </tr>
+    {{/each}}
+</script>
+

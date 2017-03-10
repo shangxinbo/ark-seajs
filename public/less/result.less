@@ -1,0 +1,204 @@
+@import (reference) "base.less";
+//---------------------------------------------- 筛选结果页样式 --------------------------------------------------------
+.main{
+  padding-top: 40px;
+}
+.filters{
+  margin: 0 40px 26px;
+  padding-bottom: 38px;
+  border-bottom: 1px solid @lineColor1;
+  position: relative;
+}
+.filters-content{
+  padding: 0 20px;
+}
+.filters-item{
+  margin-top: 45px;
+  width: 100%;
+  min-height: 52px;
+  padding-left: 145px;
+  font-size: 0;
+  .box-sizing();
+  position: relative;
+  &:before{
+    display: block;
+    content: '';
+    width: 26px;
+    height: 1px;
+    background-color: @purpleColor;
+    position: absolute;
+    left: 21px;
+    top: 30px;
+  }
+  &.first{
+    margin-top: 0;
+    &:after{
+      display: block;
+      content: '';
+      width: 1px;
+      height: 98px;
+      background-color: @purpleColor;
+      position: absolute;
+      left: 20px;
+      top: 30px;
+    }
+  }
+  &.second{
+    &:after{
+      display: block;
+      content: '\5e76\4e14';
+      .wh(41px);
+      border-radius: 50%;
+      background-color: @purpleColor;
+      font-size: 12px;
+      text-align: center;
+      line-height: 41px;
+      position: absolute;
+      left: 0;
+      top: -38px;
+    }
+  }
+  h3{
+    height: 42px;
+    font-size: 16px;
+    line-height: 42px;
+    margin-top: 10px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+  }
+  span{
+    display: inline-block;
+    vertical-align: top;
+    height: 42px;
+    padding: 0 40px 0 20px;
+    margin: 10px 22px 0 0;
+    font-size: 16px;
+    line-height: 41px;
+    background-color: @purpleColor;
+    cursor: pointer;
+    position: relative;
+    &:hover{
+      box-shadow: 0 0 3px fade(@blackColor ,50%);
+      background-color: lighten(@purpleColor,3%); //亮度增加 3%
+    }
+  }
+  i{
+    .flo();
+    cursor: pointer;
+    background: data-uri('@{url}/filters-icon.png') no-repeat;
+    &.delete{
+      .wh(10px);
+      position: absolute;
+      top: 17px;
+      right: 16px;
+      background-position: 0 -20px;
+      &:hover{
+        background-position: -10px -20px;
+      }
+    }
+    &.modify{
+      display: inline-block;
+      vertical-align: top;
+      .wh(20px);
+      margin-top: 21px;
+      background-position: 0 0;
+      &:hover{
+        background-position: -20px 0;
+      }
+    }
+  }
+  a{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    width: 120px;
+    height: 42px;
+    font-size: 16px;
+    line-height: 41px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: @greenColor;
+    color: @whiteColor;
+    &:hover{
+      box-shadow: 0 0 3px fade(@blackColor ,50%);
+      background-color: lighten(@greenColor,3%); //亮度增加 3%
+    }
+  }
+}
+.last-two{
+  position: relative;
+  &:before{
+    display: block;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: @purpleColor;
+    position: absolute;
+    left: 20px;
+    bottom: 21px;
+  }
+  &:after{
+    display: block;
+    content: '\5e76\4e14';
+    .wh(41px);
+    border-radius: 50%;
+    background-color: @purpleColor;
+    font-size: 12px;
+    text-align: center;
+    line-height: 41px;
+    margin-top: -20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+}
+.filters-history{
+  height: 20px;
+  position: absolute;
+  right: 30px;
+  a{
+    font-size: 16px;
+    line-height: 20px;
+    color: @greenColor;
+    span{
+      display: inline-block;
+      vertical-align: top;
+    }
+    i{
+      display: inline-block;
+      vertical-align: top;
+      width: 17px;
+      height: 14px;
+      background: data-uri('@{url}/filters-history.png') no-repeat 0 0;
+      margin: 3px 8px 0 0;
+    }
+    &:hover{
+      span{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+@import "leftCentent-rightButton.less";
+@import "line-chart.less";
+@import "chart.less";
+.center-button{
+  padding: 0 60px 38px;
+}
+@media (max-width: 1366px){
+  .filters{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .filters-content{
+    padding: 0 15px;
+  }
+  .center-button{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+//---------------------------------------------- 筛选结果页样式 End ----------------------------------------------------

@@ -1,0 +1,34 @@
+{% extends '../common/layout.html' %}
+
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/css/label-application.css">
+{% endblock %}
+
+{% block main %}
+<div class="warp">
+    <div class="main">
+        <ul class="breadcrumb">
+            <li><a data-href="datause" href="/project/list_new.html">营销项目</a></li>
+            <li><span></span></li>
+        </ul>
+        <div class="title-bar">
+            <h2></h2>
+        </div>
+        <div class="label-initial">
+            <h3>某银行客户建模与营销流程</h3>
+            <img src="/img/label-initial.png" />
+            <p>效果反馈是决策执行结果的反映过程，是决策执行效果向决策者的回传，是决策进一步修正的信息来源。</p>
+            <p>在决策的执行过程中必须建立完善的信息反馈系统，以便在多方案中选择最佳方案，对决策方案的执行过程进行有效控制，使决策取得理想效果。</p>
+        </div>
+        <div class="label-button">
+            <a href="javascript:void(0);" class="create"><i class="icon01"></i><span>创建反馈模版</span></a>
+            <a href="javascript:void(0);" data-dialog="feedbackList" class="history"><i class="icon02"></i><span>历史反馈模版</span></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block other %}
+{% parent %}
+<script type="text/javascript" id="js-run" data-js="page/select_template">seajs.use('/js/lib/run');</script>
+{% endblock %}

@@ -1,0 +1,63 @@
+.modal{
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.58);
+    z-index: 2;
+}
+.center{
+	height: 100%;
+	width: 30%;
+	margin: 0 auto;
+}
+.modalWrap{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #FFF;	
+	padding: 3em;
+	border-radius: 4px;
+}
+.modalWrap>i{
+	position: absolute;
+    padding: 0 1rem 0 1rem;
+    font-size: 2rem;
+    font-style: normal;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.modalForm{
+	margin: 0 auto;
+	display: table;
+	font-size: 1.6rem;
+	color: #6E6E6E;
+}
+.modalForm input{
+	display: table-cell;
+	padding: .5em;
+	border-radius: 4px;
+	font-size: inherit;
+	color: inherit;
+}
+.btn{
+	border-radius: 3px;
+    padding: .5em;
+    margin: 9;
+    width: 46%;
+    background: #508ac5;
+    color: #fff;
+    margin: 2em auto 0 auto;
+    text-align: center;
+    font-size: inherit;
+    cursor: pointer;
+}
+.default{
+	border:1px solid #ccc;
+}
+.err{
+	border:1px solid #ff0000;
+}
+

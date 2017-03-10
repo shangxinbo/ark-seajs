@@ -1,0 +1,131 @@
+@import (reference) "base.less";
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,select,textarea,th,td{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+address,cite,dfn,em,i,var{font-style:normal;}
+small{font-size:12px;}
+dl,ol,ul,li{list-style-type:none;}
+a{text-decoration:none;outline:none;}
+a:hover{text-decoration:none;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+button,input,select,textarea{font-size:100%;outline:none;}
+input[type="submit"],input[type="password"],input[type="reset"],input[type="button"],button{-webkit-appearance:none;}
+input::-ms-clear,input::-ms-reveal{display: none;} // 去掉IE下输入内容自动出现的叉号和密码输入框出现的眼睛符号
+textarea{resize:none;}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:none;vertical-align:top;}
+article,aside,details,figcaption,figure,footer,header,main,nav,section,summary{display:block;}
+audio,canvas,video{display:inline-block;}
+
+html{
+  .wh();
+}
+body{
+  .minWidth();
+  min-height: 100%;
+  font:12px/1.2 @YaHei;
+  color: @whiteColor;
+  background-color: @BGColor;
+  position: relative;
+  -webkit-text-size-adjust:none;
+}
+.warp{
+  padding: 86px 0 70px;
+}
+@import "dialog.less"; // 弹窗样式
+@import "header.less"; // 头部样式
+@import "footer.less"; // 尾部样式
+@import "main404.less"; // 404样式
+
+
+
+
+
+
+
+
+
+//-----------------------------------------------  滚动条样式  ---------------------------------------------------------
+
+@scrollBarColor1: #C9CCD5;
+@scrollBarColor2: #ACAEBA;
+
+.scroll-warp{
+  .wh();
+  overflow: hidden;
+  .box-sizing();
+  position: relative;
+}
+.scroll-content{
+  padding-right: 20px;
+}
+
+//.mCustomScrollbar{ -ms-touch-action: pinch-zoom; touch-action: pinch-zoom;}
+//.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ -ms-touch-action: auto; touch-action: auto; }
+.mCustomScrollBox{
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  max-width: 100%;
+  outline: none;
+  direction: ltr;
+}
+.mCSB_container{
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+.mCSB_scrollTools{
+  position: absolute;
+  width: 10px;
+  height: auto;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  .mCSB_draggerContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: auto;
+  }
+  .mCSB_dragger {
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+    .mCSB_dragger_bar{
+      width: 10px;
+      height: 100%;
+      margin: 0 auto;
+      border-radius: 5px;
+      background-color: @scrollBarColor2;
+      position: relative;
+      text-align: center;
+      .transition(background-color,200ms,linear);
+    }
+  }
+  .mCSB_draggerRail{
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
+    background-color: @scrollBarColor1;
+    border-radius: 2px;
+  }
+}
+.mCustomScrollBox{
+  &:hover{
+    .mCSB_scrollTools{
+      .mCSB_dragger{
+        .mCSB_dragger_bar{
+          background-color: darken(@scrollBarColor2,8%);
+        }
+      }
+    }
+  }
+}

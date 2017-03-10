@@ -1,0 +1,27 @@
+.main404 {
+  width: 1000px;
+  height: 500px;
+  margin: -250px 0 0 -500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.main404 img {
+  display: block;
+  margin: 0 auto;
+}
+.main404 h3 {
+  height: 100px;
+  line-height: 110px;
+  font-size: 105px;
+  font-weight: bold;
+  text-align: center;
+  color: #E94D6A;
+}
+.main404 h4 {
+  height: 50px;
+  line-height: 50px;
+  margin: 20px 0 44px;
+  font-size: 40px;
+  text-align: center;
+}

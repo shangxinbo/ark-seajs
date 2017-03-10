@@ -1,0 +1,51 @@
+{% extends '../../common/layout.html' %}
+
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/css/crowd.css">
+{% endblock %}
+
+{% block main %}
+<div class="warp">
+    <div class="main">
+        <div class="nav-switch">
+            <a href="/template.html"><span>筛选历史</span></a>
+            <a href="javascript:void(0);" class="active"><span>上传人群管理</span></a>
+        </div>
+        <div class="center-button">
+            <a data-dialog="newCrowd" class="clearStorage" href="javascript:void(0);"><i class="add">+</i><span>上传新人群</span></a>
+        </div>
+        <div id="com-table">
+            <div class="com-table-null">暂无数据</div>
+        </div>
+        <div class="page"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block other %}
+<script id="list" type="text/x-handlebars-template">
+    <table class="com-table">
+        <tr>
+            <th class="w20p tl">名称</th>
+            <th class="tl">描述</th>
+            <th class="w15p tl">客户数</th>
+            <th class="w15p">上传时间</th>
+            <th class="w11p">操作</th>
+        </tr>
+        {{#each rows}}
+        <tr data-id="{{id}}">
+            <td class="tl">{{#if createTime}}{{uploadName}}{{else}}{{name}}{{/if}}</td>
+            <td class="tl">{{#if createTime}}{{uploadDesc}}{{else}}{{description}}{{/if}}</td>
+            <td class="tl">{{#if createTime}}{{lines}}{{else}}{{num}}{{/if}}</td>
+            <td>{{#if createTime}}{{createTime}}{{else}}{{updated_at}}{{/if}}</td>
+            <td class="edit">
+                <a href="javascript:void(0);">删除</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</script>
+
+{% parent %}<script type="text/javascript" id="js-run" data-js="page/crowdList">seajs.use('/js/lib/run');</script>
+{% endblock %}

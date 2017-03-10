@@ -1,0 +1,85 @@
+@YaHei:"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei";  //苹果丽黑、微软雅黑、文泉驿微米黑（linux系统）
+@Arial: Arial;
+@SongTi:"\5b8b\4f53";
+
+
+@whiteColor:#FFF;
+@blackColor:#000;
+@grayColor:#2D2D2D;
+@grayColor2:#414164;
+@BGColor:#25254D;
+@purpleColor:#3F3F7D;
+@redColor:#E94D6A;
+@greenColor:#09A88D;
+@blueColor:#398AD6;
+@violetColor:#B84BC8;
+@brownColor:#CC855A;
+
+@grayPurpleColor1:#8B8DA8;
+@grayPurpleColor2:#8E87A5;
+
+@lineColor1:#3D395C;
+@lineColor2:#61597A;
+@lineColor3:#E2E2E2;
+
+@grayText:#868686;
+
+@url: "../img";
+
+
+.transform(@transform-functions){
+  -o-transform:@arguments;
+  -ms-transform:@arguments;
+  -moz-transform:@arguments;
+  -webkit-transform:@arguments;
+  transform:@arguments;
+}
+.transition(@transition-property,@transition-duration,@transition-timing-function){
+  -o-transition:@arguments;
+  -moz-transition: @arguments;
+  -webkit-transition: @arguments;
+  transition: @arguments;
+}
+
+
+.wh(@n:100%){
+  width:@n;
+  height:@n;
+}
+.flo(){
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+.minWidth(@width:1000px){
+  min-width: @width;
+}
+.box-sizing(@content:border-box){
+  -webkit-box-sizing: @content;
+  -moz-box-sizing: @content;
+  box-sizing: @content;
+}
+.displayFlex(){
+  display: -webkit-flex;
+  //display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.displayFlexW(@content:center){  //横向居中
+  -webkit-justify-content: @content;
+  //-moz-justify-content: @content;
+  -ms-justify-content: @content;
+  justify-content: @content;
+}
+.displayFlexH(@content:center){ // 垂直居中
+  -webkit-align-items: @content;
+  //-moz-align-items: @content;
+  -ms-align-items: @content;
+  align-items: @content;
+}
+.user-select(@content:none){
+  -webkit-user-select: @content;
+  -moz-user-select: @content;
+  -ms-user-select: @content;
+  user-select:none;
+}

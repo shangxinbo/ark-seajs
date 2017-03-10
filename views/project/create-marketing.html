@@ -1,0 +1,103 @@
+{% extends '../common/layout.html' %}
+
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/css/create.css">
+{% endblock %}
+
+{% block main %}
+<div class="warp">
+    <div class="main">
+        <h2>创建营销项目</h2>
+        <ul class="create-warp">
+            <li>
+                <div class="li-input-warp" data-type="projectName">
+                    <label>项目名称</label>
+                    <input class="text" type="text" id="projName" />
+                </div>
+            </li>
+            <li>
+                <label>筛选条件</label>
+                <div class="filters-item">
+                    <a href="javascript:void(0);" data-dialog="filter"><i class="filter"></i><em>筛选条件</em></a>
+                </div>
+            </li>
+            <li>
+                <div class="li-input-warp">
+                    <label>类型</label>
+                    <div class="select-warp">  <!-- 在div上加上class（select-open）显示出ul列表 -->
+                        <p class="comboBox" data-type="cycle">周期项目</p>
+                        <ul>
+                            <li data-cycle="0">单次项目</li>
+                            <li data-cycle="1">周期项目</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="li-input-warp" data-type="beginTime">
+                    <label>开始时间</label>
+                    <div class="calendar-warp">
+                        <input class="text" type="text" readonly="readonly" id="datepicker" />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="li-input-warp" id="marketing-cycle">
+                    <label>营销周期</label>
+                    <div class="select-warp">  <!-- 在div上加上class（select-open）显示出ul列表 -->
+                        <p class="comboBox" data-type="cycle">周</p>
+                        <ul>
+                            <li data-k="1">天</li>
+                            <li data-k="2">周</li>
+                            <li data-k="3">月</li>                           
+                        </ul>
+                    </div>
+                </div>
+                <div class="li-input-warp">
+                    <label></label>
+                    <div class="select-warp w145">  <!-- 在div上加上class（select-open）显示出ul列表 -->
+                        <p class="comboBox"  data-type="includeWeek">包含周末</p>
+                        <ul>
+                            <li>包含周末</li>
+                            <li>不包含周末</li>
+                        </ul>
+                    </div>
+                    <div class="select-warp w170">  <!-- 在div上加上class（select-open）显示出ul列表 -->
+                        <p class="comboBox" data-type="includeHoliday">包含法定假日</p>
+                        <ul>
+                            <li>包含法定假日</li>
+                            <li>不包含法定假日</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="li-input-warp" data-type="area">
+                    <label>地域</label>
+                    <input class="text" type="text" id="projArea" />               
+                </div>
+            </li>
+            <li>
+                <div class="li-input-warp" data-type="detailRequirement">
+                    <label>描述</label>
+                    <textarea id="projDesc"></textarea>                  
+                </div>
+            </li>
+        </ul>
+
+        <div class="create-button">
+            <a class="red" id="submit" href="javascript:void(0);">提交</a>
+            <a class="gray">取消</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+<script id="filters-item" type="text/x-handlebars-template">
+<span data-dialog="filter">{{sel.selName}}
+	<i class="delete"></i>
+</span><i class="modify" data-dialog="filter"></i>
+</script>
+{% block other %}
+{% parent %}
+<script type="text/javascript" id="js-run" data-js="page/project_create_marketing">seajs.use('/js/lib/run');</script>
+{% endblock %}

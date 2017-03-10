@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cmn-Hans">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title>集奥方舟</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="bookmark" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../public/css/common.css">
+    <link rel="stylesheet" type="text/css"  href="../public/css/crowd.css">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../public/js/lib/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="header">
+    <h1><a href="index.html" title="集奥方舟"><img src="../public/img/logo.png" width="148" height="43" alt="集奥方舟" title="集奥方舟" /></a></h1>
+    <ul class="header-content">
+        <li><a class="icon news-icon" href="news.html"><span class="icon"></span><em>5</em></a></li>
+        <li>
+            <i class="icon login-icon"></i>
+            <div class="quit">
+                <p title="Hi，Sangxinbo">Hi，Sangxinbo</p>
+                <a href="javascript:void(0);"><i class="icon icon01"></i><span>我的账号</span></a>
+                <a href="javascript:void(0);"><i class="icon icon02"></i><span>退 出</span></a>
+            </div>
+        </li>
+        <li>
+            <i class="icon nav-icon"></i>
+            <div class="nav">
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav01"></i><span>新客营销</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav02"></i><span>存量分析</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav03"></i><span>统计分析</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav05"></i><span>人群管理</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav06"></i><span>营销分析</span></a>
+                <a href="#"><!--[if IE 8 ]><em class="icon"></em><![endif]--><i class="icon nav04"></i><span>帐号管理</span></a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="warp">
+    <div class="main">
+        <div class="nav-switch">
+            <h3>我的账号</h3>
+        </div>
+        <table class="general-account">
+            <tr>
+                <th>账号名称：</th>
+                <td>shangxinbo</td>
+            </tr>
+            <tr>
+                <th>昵称：</th>
+                <td>小酒1982</td>
+            </tr>
+            <tr>
+                <th>手机号：</th>
+                <td>18618329876</td>
+            </tr>
+            <tr>
+                <th>邮箱：</th>
+                <td>shangxinbo@qq.com</td>
+            </tr>
+            <tr>
+                <th>创建时间：</th>
+                <td>2016.07.02  15:20</td>
+            </tr>
+        </table>
+        <div class="general-button">
+            <a href="javascript:void(0);" onclick="getWindow('dialog01');">修改</a>
+            <a href="javascript:void(0);" onclick="getWindow('dialog02');">重置密码</a>
+        </div>
+    </div>
+</div>
+<div class="footer"><p>Copyright&nbsp;&copy;&nbsp;2016&nbsp;集奥聚合</p></div>
+
+<!-- 普通用户重置密码弹窗 -->
+<div class="dialog" id="dialog02">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>重置密码</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-upload">
+            <ul class="input-warp">
+                <li>
+                    <label>旧密码</label>
+                    <input class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>新密码</label>
+                    <input class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>确认密码</label>
+                    <input class="input-text" type="text" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确定</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 普通用户重置密码弹窗 End -->
+
+<!-- 修改账号弹窗 -->
+<div class="dialog" id="dialog01">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>修改账号</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-upload">
+            <ul class="input-warp">
+                <li class="disabled">
+                    <label>账号名称</label>
+                    <input class="input-text" type="text" value="shangxinbo" disabled="disabled" />
+                </li>
+                <li>
+                    <label>昵称</label>
+                    <input class="input-text" type="text" />
+                    <span class="tips">选填</span>
+                </li>
+                <li>
+                    <label>手机号</label>
+                    <input class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>邮箱</label>
+                    <input class="input-text" type="text" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确定</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 修改账号弹窗 End -->
+
+<script type="text/javascript" src="../public/js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" >
+    $(document).ready(function(){
+        $(".header-content li").hover(function(){
+            $(this).addClass("li-hover");
+        },function () {
+            $(this).removeClass("li-hover");
+        });
+    });
+    function getWindow(id) {
+        if($('#shadowLayer').length == 0){
+            showDialog(id);
+        }else{
+            $(".dialog").hide();
+            var ids = $("#" + id);
+            var idH = -(ids.height()/2);
+            var idW = -(ids.width()/2);
+            ids.show().css({ "margin-left": idW,"margin-top": idH });
+        }
+        $("#"+id+" .dialog-close").click(function () {
+            hideDialog(id);
+        });
+        $("#shadowLayer").click(function () {
+            hideDialog(id);
+        });
+    }
+    function hideDialog(id){
+        $("#"+id).hide();
+        $("#shadowLayer").remove();
+    }
+    function showDialog(id){
+        var ids = $("#" + id);
+        var idH = -(ids.height()/2);
+        var idW = -(ids.width()/2);
+        $('<div id="shadowLayer"></div>').appendTo("body").show();
+        ids.show().css({ "margin-left": idW,"margin-top": idH });
+    }
+</script>
+</body>
+</html>

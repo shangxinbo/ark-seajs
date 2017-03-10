@@ -1,0 +1,259 @@
+{% extends '../common/layout.html' %}
+
+{% block head %}
+{% parent %}
+<link rel="stylesheet" href="/css/crowd.css">
+{% endblock %}
+
+{% block main %}
+<div class="warp">
+    <div class="main" data-page="1" style="display:none;">
+        <div class="nav-switch">
+            <h3>我的账号</h3>
+        </div>
+        <table class="general-account"></table>
+        <div class="general-button">
+            <a class="edit_myinfo" href="javascript:void(0)">修改</a>
+            <a class="resetpwd" href="#">重置密码</a>
+        </div>
+    </div>
+    <div class="main" data-page="2" style="display: none;">
+        <div class="nav-switch">
+            <h3>账号管理</h3>
+        </div>
+        <div class="center-button">
+            <a id="adduser" href="javascript:void(0);"><i class="add"></i><span>添加账号</span></a>
+        </div>
+        <table class="com-table"></table>
+        <div class="page"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block other %}
+
+<!-- 管理员重置密码弹窗 -->
+<div id="resetpass" class="dialog">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>重置<span>shangxinbo</span>的密码</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-upload">
+            <ul class="input-warp">
+                <li>
+                    <label>新密码</label>
+                    <input id="reset_password" class="input-text" type="password" onblur="if (value==''){value=''}" />
+                </li>
+                <li>
+                    <label>确认密码</label>
+                    <input id="reset_repeat_password" class="input-text" type="password" onblur="if (value==''){value=''}" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确定</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 管理员重置密码弹窗 End -->
+<!-- 管理员重置密码弹窗 -->
+<div id="user_resetpass" class="dialog">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"></div>
+    <div class="dialog-body">
+        <div class="dialog-upload">
+            <ul class="input-warp">
+                <li>
+                    <label>旧密码</label>
+                    <input autocomplete="off" id="user_password" class="input-text" type="password" />
+                </li>
+                <li>
+                    <label>新密码</label>
+                    <input autocomplete="off" id="user_reset_password" class="input-text" type="password" />
+                </li>
+                <li>
+                    <label>确认密码</label>
+                    <input autocomplete="off" id="user_reset_repeat_password" class="input-text" type="password" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确定</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 管理员重置密码弹窗 End -->
+<!-- 添加账号弹窗 -->
+<div id="addusers" class="dialog">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>添加账号</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-upload">
+            <ul class="input-warp">
+                <li>
+                    <label>账号名称</label>
+                    <input name="username" class="input-text w195" type="text" />
+                    <div id="secret" class="select-warp w140">
+                        <p data-type="3">普通用户</p>
+                        <ul>
+                            <li data-type="3">普通用户</li>
+                            <li data-type="0">数据分析师</li>
+                            <li data-type="4">存量用户</li>
+                        </ul>
+                    </div>
+                    <p class="error"><i></i><span>请输入内容</span></p>
+                </li>
+                <li>
+                    <label>昵称</label>
+                    <input name="nickname" class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>手机号</label>
+                    <input name="phone" class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>邮箱</label>
+                    <input name="email" class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>密码</label>
+                    <input name="password" class="input-text" type="password" />
+                </li>
+                <li>
+                    <label>确认密码</label>
+                    <input name="repassword" class="input-text" type="password" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确定</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 添加账号弹窗 End -->
+<!-- 修改账号弹窗 -->
+<div id="useralter" class="dialog">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>修改账号</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-upload">
+            <ul class="input-warp">
+                <li class="disabled">
+                    <label>账号名称</label>
+                    <input class="input-text" type="text" value="" disabled="disabled" />
+                </li>
+                <li>
+                    <label>昵称</label>
+                    <input id="usernickname" class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>手机号</label>
+                    <input id="userphone" class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>邮箱</label>
+                    <input id="useremail" class="input-text" type="text" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确定</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 修改账号弹窗 End -->
+<!-- 修改账号弹窗 -->
+<div id="alter" class="dialog">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-header"><h4>修改账号</h4></div>
+    <div class="dialog-body">
+        <div class="dialog-upload">
+            <ul class="input-warp">
+                <li class="disabled">
+                    <label>账号名称</label>
+                    <input name="" class="input-text" type="text" value="" disabled="disabled" />
+                </li>
+                <li>
+                    <label>昵称</label>
+                    <input name="nickname" id="nickname" class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>手机号</label>
+                    <input name="phone" id="phone" class="input-text" type="text" />
+                </li>
+                <li>
+                    <label>邮箱</label>
+                    <input name="email" id="email" class="input-text" type="text" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dialog-footer">
+        <a class="red" href="javascript:void(0);">确定</a>
+        <a href="javascript:void(0);">取消</a>
+    </div>
+</div>
+<!-- 修改账号弹窗 End -->
+
+<script id="list" type="text/x-handlebars-template">
+    <tr data-id="{{rows.id}}">
+        <th>账号名称：</th>
+        <td>{{rows.username}}</td>
+    </tr>
+    <tr>
+        <th>昵称：</th>
+        <td>{{rows.nickname}}</td>
+    </tr>
+    <tr>
+        <th>手机号：</th>
+        <td>{{rows.phone}}</td>
+    </tr>
+    <tr>
+        <th>邮箱：</th>
+        <td>{{rows.email}}</td>
+    </tr>
+    <tr>
+        <th>创建时间：</th>
+        <td>{{rows.created_at}}</td>
+    </tr>
+</script>
+<script id="list1" type="text/x-handlebars-template">
+    <table class="com-table">
+        <tr>
+            <th class="w13p">账号名称</th>
+            <th class="w13p">昵称</th>
+            <th class="w10p">用户类型</th>
+            <th class="w11p">手机号</th>
+            <th>邮箱</th>
+            <th class="w11p">创建时间</th>
+            <th class="w10p">状态</th>
+            <th class="w22p">操作</th>
+        </tr>
+        {{#each rows}}
+        <tr data-id="{{id}}">
+            <td>{{username}}</td>
+            <td>{{nickname}}</td>
+            <td>{{usertype}}</td>
+            <td>{{phone}}</td>
+            <td>{{email}}</td>
+            <td>{{created_at}}</td>
+            <td class="status">{{status}}</td>
+            <td>
+                <a class="alter" href="javascript:void(0);">修改</a>
+                <em class="line"></em>
+                <a class="resetpass" href="javascript:void(0);">重置密码</a>
+                <em class="line"></em>
+                <a class="state" href="javascript:void(0);">{{str}}</a><span>
+                <em class="line"></em>
+                <a class="delete" href="javascript:void(0);">删除</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</script>
+
+{% parent %}<script type="text/javascript" id="js-run" data-js="page/users">seajs.use('/js/lib/run');</script>
+{% endblock %}

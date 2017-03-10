@@ -1,0 +1,79 @@
+{% extends 'common/layout.html' %}
+
+{% block head %}
+    {% parent %}
+    <link rel="stylesheet" href="/css/index.css">
+{% endblock %}
+
+{% block main %}
+<div class="warp">
+    <div class="main">
+        <ul class="index-content">
+            <li>
+                <a href="javascript:void(0);" data-dialog="firstStep">
+                    <i class="index-icon icon01"></i>
+                    <h2>新客营销</h2>
+                    <h3>New Marketing</h3>
+                    <p>分析行为数据找到客户需求，挖掘权益得到客群共同特性，进行精准营销</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" data-dialog="crowd" data-crowdType="0">
+                    <i class="index-icon icon02"></i>
+                    <h2>存量分析</h2>
+                    <h3>Stock Analysis</h3>
+                    <p>沉睡高价值客群促活，对存量客户行为数据进行分析找到高价值客群</p>
+                </a>
+            </li>
+            <li>
+                <a href="/report.html?ana=1">
+                <i class="index-icon icon03"></i>
+                    <h2>统计分析</h2>
+                    <h3>Statistical Analysis</h3>
+                    <p>多维度分析统计客户群体特征，为您的决策和应用提供最直观有效的依据</p>
+                </a>
+            </li>
+            <li>
+                <a href="/upload/history/index.html">
+                <i class="index-icon icon05"></i>
+                    <h2>人群管理</h2>
+                    <h3>Crowd Management</h3>
+                    <p>对本账号历史上传人群，和以往筛选记录的相关管理与应用</p>
+                </a>
+            </li>
+            <li>
+                <a href="/project/list_new.html">
+                    <i class="index-icon icon06"></i>
+                    <h2>营销分析</h2>
+                    <h3>Marketing Analysis</h3>
+                    <p>营销应用筛选出来的目标客户群体，并对营销反馈阶段进行管理</p>
+                </a>
+            </li>
+            <li>
+                <a href="/users/index.html">
+                    <i class="index-icon icon04"></i>
+                    <h2>帐号管理</h2>
+                    <h3>Account management</h3>
+                    <p>用于新增用户、完善用户资料、密码找回、删除冗余用户</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block other %}
+<!-- 新客获取向导弹窗 -->
+<div class="dialog" id="getNewCustomer">
+    <a href="javascript:void(0);" class="dialog-close" title="关闭"></a>
+    <div class="dialog-body">
+        <div class="dialog-bugButton">
+            <a href="/filter/index.html"><i class="icon01"></i><span>标签筛选</span></a>
+            <a href="/modeling-screening.html"><i class="icon02"></i><span>建模筛选</span></a>
+        </div>
+    </div>
+</div>
+<!-- 新客获取向导弹窗 End -->
+
+{% parent %}<script type="text/javascript" id="js-run" data-js="page/index">seajs.use('/js/lib/run');</script>
+{% endblock %}

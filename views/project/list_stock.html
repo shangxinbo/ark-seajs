@@ -1,0 +1,137 @@
+{% extends '../common/layout.html' %} 
+{% block head %} 
+{% parent %}
+<link rel="stylesheet" href="/css/crowd.css"> 
+{% endblock %} 
+{% block main %}
+<div class="warp">
+    <div class="main"></div>
+</div>
+{% endblock %} 
+{% block other %}
+<script id="list" type="text/html">
+    <div class="nav-switch">
+        <a href="/project/list_new.html">
+            <span>新客营销项目</span>
+        </a>
+        <a href="javascript:void(0);" class="active">
+            <span>存量营销项目</span>
+        </a>
+    </div>
+    <div class="center-button">
+        {{if total}}
+        <ul>
+            {{if total}}
+                {{if total.salesNum}}
+                <li>筛选销售线索：
+                    <span>{{total.salesNum}}条</span>
+                </li>
+                {{/if}}
+                {{if total.changeNum}}
+                <li>转化用户：
+                    <span>{{total.changeNum}}人</span>
+                </li>
+                {{/if}}
+            {{/if}}
+        </ul>
+        {{/if}}
+        <label class="search">
+            <input type="text" value="{{keywords}}" placeholder="项目关键词" />
+            <span>
+                <i class="magnifier"></i>
+            </span>
+        </label>
+        <a href="javascript:void(0)" data-dialog="crowd" data-crowdType="0">
+            <i class="add"></i>
+            <span>创建新项目</span>
+        </a>
+    </div>
+    <div id="com-table">
+        {{if data.length<=0}}
+        <div class="com-table-null">暂无数据</div>
+        {{else}}
+        <table class="com-table">
+            <tr>
+                <th width="9%" class="tl">项目名称</th>
+                <th width="9%" class="tl">产品类型</th>
+                <th width="9%" class="tl">权益偏好</th>
+                <th width="9%" class="tl">渠道</th>
+                <th width="9%" class="tl">地域</th>
+                <th width="9%" class="tl">资产</th>
+                <th width="9%" class="tl">上网行为</th>
+                <th width="9%" class="tl">负责人</th>
+                <th width="9%" class="tl">描述</th>
+                <th width="9%" class="tl">状态</th>
+                <th width="9%" class="status">操作</th>
+            </tr>
+            {{each data as item i}}
+            <tr data-id="{{item.id}}">
+                <td width="9%" class="tl">{{item.project_name}}</td>
+                <td width="9%" class="tl" title="{{item.product}}">
+                    {{if item.product}}{{if item.product.length>12}}{{item.product.substr(0,12)}}…{{else}}{{item.product}}{{/if}}{{else}}——{{/if}}
+                </td>
+                <td width="9%" class="tl" title="{{item.interests_channel}}">
+                    {{if item.interests_channel}}{{if item.interests_channel.length>12}}{{item.interests_channel.substr(0,12)}}…{{else}}{{item.interests_channel}}{{/if}}{{else}}——{{/if}}
+                </td>
+                <td width="9%" class="tl" title="{{item.channel}}">
+                    {{if item.channel}}{{if item.channel.length>12}}{{item.channel.substr(0,12)}}…{{else}}{{item.channel}}{{/if}}{{else}}——{{/if}}
+                </td>
+                <td width="9%" class="tl" title="{{item.area}}">
+                    {{if item.area}}{{if item.area.length>12}}{{item.area.substr(0,12)}}…{{else}}{{item.area}}{{/if}}{{else}}——{{/if}}
+                </td>
+                <td width="9%" class="tl" title="{{item.assets}}">
+                    {{if item.assets}}{{if item.assets.length>12}}{{item.assets.substr(0,12)}}…{{else}}{{item.assets}}{{/if}}{{else}}——{{/if}}
+                </td>
+                <td width="9%" class="tl" title="{{item.internet_access}}">
+                    {{if item.internet_access}}{{if item.internet_access.length>12}}{{item.internet_access.substr(0,12)}}…{{else}}{{item.internet_access}}{{/if}}{{else}}——{{/if}}
+                </td>
+                <td width="9%" class="tl" title="{{item.contacts}}">
+                    {{if item.contacts}}{{if item.contacts.length>12}}{{item.contacts.substr(0,12)}}…{{else}}{{item.contacts}}{{/if}}{{else}}——{{/if}}
+                </td>
+                <td width="9%" class="tl" title="{{item.describe}}">
+                    {{if item.describe}}{{if item.describe.length>12}}{{item.describe.substr(0,12)}}…{{else}}{{item.describe}}{{/if}}{{else}}——{{/if}}
+                </td>
+                <td width="9%" class="tl">
+                    {{if item.status==0}}
+                        已结束
+                    {{else if item.status==1}}
+                        未开始
+                    {{else if item.status==2}}
+                        正在进行
+                    {{else if item.status==3}}
+                        未下载
+                    {{else if item.status==4}}
+                        已下载
+                    {{else if item.status==-1}}
+                        文件生成失败
+                    {{/if}}
+                </td>
+                <td width="9%">
+                    {{if item.status>2&&!(item.screen_num==0&&item.status==3)}}
+                    <a href="javascript:void(0)" data-down="{{item.id}}">下载</a>
+                    {{/if}}
+                    {{if item.template_id}}
+                    <em class="line"></em>
+                    <a target="_blank" href="/project/view-feedback.html?template_id={{item.template_id}}&id={{item.id}}&source=update">预览模板</a>
+                    {{/if}}
+                    {{if item.status>3}}
+                    <em class="line"></em>
+                        {{if item.template_id}}
+                           <a href="/project/cycle.html?id={{item.id}}&project_id={{item.id}}&type=stock">项目分析</a>
+                        {{else}}
+                           <a href="/project/sel_template.html?id={{item.id}}&project_name={{item.project_name}}&type=stock">创建模版</a>
+                        {{/if}}
+                    {{/if}}
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+        {{/if}}
+    </div>
+    <div class="page">{{pages}}</div>
+</script>
+{% parent %}
+<script type="text/javascript" id="js-run" data-js="page/project_list">
+    seajs.use('/js/lib/run');
+</script>
+{% endblock %}

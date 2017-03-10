@@ -1,0 +1,218 @@
+@import (reference) "base.less";
+
+.com-table{
+  @tableBg:#292952;
+  @tableTh:#45416D;
+  @tableTd:#222249;
+  @tableLine:#3E3A5D;
+  @tableBGHigh: #2E2E58;
+  @tableBGHigh2: #282850;
+
+  width: 100%;
+  background-color: @tableBg;
+  overflow: hidden;
+  color: @whiteColor;
+  .w5p{
+    width: 5%;
+  }
+  .w7p{
+    width: 7%;
+  }
+  .w8p{
+    width: 8%;
+  }
+  .w9p{
+    width: 9%;
+  }
+  .w10p{
+    width: 10%;
+  }
+  .w11p{
+    width: 11%;
+  }
+  .w12p{
+    width: 12%;
+  }
+  .w13p{
+    width: 13%;
+  }
+  .w14p{
+    width: 14%;
+  }
+  .w15p{
+    width: 15%;
+  }
+  .w20p{
+    width: 20%;
+  }
+  .w21p{
+    width: 21%;
+  }
+  .w22p{
+    width: 22%;
+  }
+  .w24p{
+    width: 24%;
+  }
+  .w30p{
+    width: 30%;
+  }
+  .cycle{
+    width: 5%;
+    min-width: 50px;
+  }
+  .clues{
+    width: 8%;
+    min-width: 90px;
+  }
+  .date{
+    width: 9%;
+    min-width: 100px;
+  }
+  .status{
+    width: 7%;
+    min-width: 60px;
+  }
+  .account{
+    width: 15%;
+    min-width: 230px;
+  }
+  .account2{
+    width: 11%;
+    min-width: 125px;
+  }
+  .ti10{
+    text-indent: 10px;
+  }
+  .bg{
+    background-color:@tableTd;
+    td{
+      &.special{
+        background-color: @tableBGHigh2;
+      }
+    }
+  }
+  .disable{
+    color: @grayPurpleColor2 !important;
+  }
+  .tl{
+    text-align: left !important;
+  }
+  th{
+    font-size: 14px;
+    font-weight: normal;
+    background-color:@tableTh;
+    padding: 15px;
+    &:first-child{
+      border-radius: 4px 0 0 4px;
+      border-radius: 0\0;
+      &.tl{
+        padding-left: 35px;
+      }
+    }
+    &:last-child{
+      border-radius: 0 4px 4px 0;
+      border-radius: 0\0;
+    }
+  }
+  td{
+    font-size: 16px;
+    line-height: 24px;
+    padding: 13px 15px;
+    text-align: center;
+    &:first-child{
+      &.tl{
+        padding-left: 35px;
+      }
+    }
+    a{
+      display: inline-block;
+      color: @greenColor;
+      &:hover{
+        text-decoration: underline;
+      }
+      &.button{
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        color: @whiteColor;
+        text-align: center;
+        margin-right: 15px;
+        background-color: @greenColor;
+        border-radius: 4px;
+        &:hover{
+          text-decoration: none;
+          background-color: lighten(@greenColor,3%);
+        }
+      }
+      &.disable{
+        cursor: default;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    .line{
+      display: inline-block;
+      width: 0;
+      height: 17px;
+      vertical-align: top;
+      .flo();
+      margin: 4px 5px 0;
+      border-left: 1px solid @tableLine;
+    }
+    &.special{
+      background-color: @tableBGHigh;
+    }
+  }
+}
+@media (max-width: 1366px){
+  .com-table{
+    .cycle{
+      min-width: 40px;
+    }
+    .clues{
+      min-width: 80px;
+    }
+    .date{
+      min-width: 80px;
+    }
+    .status{
+      min-width: 50px;
+    }
+    .account{
+      min-width: 190px;
+    }
+    .account2{
+      min-width: 105px;
+    }
+    th{
+      padding-left: 8px;
+      padding-right: 8px;
+      &:first-child{
+        &.tl{
+          padding-left: 20px;
+        }
+      }
+    }
+    td{
+      font-size: 14px;
+      padding: 15px 8px;
+      line-height: 20px;
+      &:first-child{
+        &.tl{
+          padding-left: 20px;
+        }
+      }
+      a.button{
+        width: 56px;
+        height: 26px;
+        line-height: 26px;
+        margin-right: 10px;
+      }
+      .line{
+        margin: 2px 3px 0;
+      }
+    }
+  }
+}

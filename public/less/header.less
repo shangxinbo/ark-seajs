@@ -1,0 +1,241 @@
+@import (reference) "base.less";
+
+.header{
+  width: 100%;
+  height: 86px;
+  background-color: @whiteColor;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  h1{
+    width: 148px;
+    height: 43px;
+    padding: 21px 0 0 60px;
+    float: left;
+    a{
+      display: block;
+      .wh();
+    }
+  }
+}
+.header-content{
+  @popBG: #3B3B5F;
+  float: right;
+  height: 100%;
+  margin-right: 60px;
+  .icon{
+    .flo();
+    background: url('@{url}/header-icon.png') no-repeat;
+  }
+  .login-icon{
+    display: block;
+    width: 30px;
+    height: 28px;
+    background-position: 0 0;
+  }
+  .nav-icon{
+    display: block;
+    .wh(28px);
+    background-position: -60px 0;
+  }
+  .news-icon{
+    display: block;
+    width: 30px;
+    height: 28px;
+    background-position: -86px -96px;
+    color: @whiteColor;
+    text-align: center;
+    &:hover{
+      background-position: -86px -124px;
+    }
+    span,em{
+      display: block;
+      .wh(24px);
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      right: -13px;
+      top: -13px;
+    }
+    span{
+      background-position: -86px -152px;
+      z-index: 1;
+    }
+    em{
+      font: 16px/25px @Arial;
+      z-index: 2;
+    }
+  }
+  li{
+    float: left;
+    height: 28px;
+    margin: 29px 30px 0;
+    position: relative;
+    cursor: pointer;
+    &>div{
+      display: none;
+      text-align: center;
+      position: absolute;
+      top: 57px;
+      background-color: @popBG;
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 1px 3px fade(@blackColor ,50%);
+      cursor: default;
+      &:before{
+        display: block;
+        content: '';
+        .wh(0);
+        .flo();
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 5px solid @popBG;
+        position: absolute;
+        top: -5px;
+      }
+    }
+    &:hover{
+      .login-icon{
+        background-position: -30px 0;
+      }
+      .nav-icon{
+        background-position: -88px 0;
+      }
+    }
+    &.li-hover{
+      .login-icon{
+        background-position: -30px 0;
+      }
+      .nav-icon{
+        background-position: -88px 0;
+      }
+      &>div{
+        display: block;
+      }
+    }
+  }
+  .quit{
+    width: 155px;
+    padding-bottom: 15px;
+    right: -65px;
+    &:before{
+      right: 75px;
+    }
+    p{
+      width: 135px;
+      height: 20px;
+      padding-top: 20px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    a{
+      display: block;
+      width: 120px;
+      height: 32px;
+      margin: 12px auto 0;
+      background-color: @redColor;
+      color: @whiteColor;
+      font-size: 16px;
+      line-height: 32px;
+      border-radius: 4px;
+      &:hover{
+        box-shadow: 0 0 3px fade(@blackColor ,50%);
+        background-color: lighten(@redColor,3%); //亮度增加 3%
+      }
+    }
+    .icon{
+      display: inline-block;
+      vertical-align: top;
+      width: 14px;
+      height: 14px;
+      margin: 9px 5px 0 0;
+    }
+    .icon01{
+      background-position: -102px -42px;
+    }
+    .icon02{
+      background-position: -102px -28px;
+    }
+    span{
+      display: inline-block;
+      vertical-align: top;
+      width: 65px;
+    }
+  }
+  .nav{
+    width: 375px;
+    height: 260px;
+    right: -30px;
+    &:before{
+      right: 40px;
+    }
+    a{
+      float: left;
+      .wh(85px);
+      margin: 30px 0 0 30px;
+      background-color: @greenColor;
+      border-radius: 50%;
+      color: @whiteColor;
+      position: relative;
+      &:hover{
+        box-shadow: 0 0 3px fade(@blackColor ,50%);
+        background-color: lighten(@greenColor,3%); //亮度增加 3%
+      }
+    }
+    em.icon{
+      display: block;
+      .wh();
+      background-position: 0 -96px;
+    }
+    i.icon{
+      display: block;
+      .wh(34px);
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      margin-left: -17px;
+    }
+    .nav01{
+      background-position: 0 -28px;
+    }
+    .nav02{
+      background-position: -34px -28px;
+    }
+    .nav03{
+      background-position: -68px -28px;
+    }
+    .nav04{
+      background-position: 0 -62px;
+    }
+    .nav05{
+      background-position: -34px -62px;
+    }
+    .nav06{
+      background-position: -68px -62px;
+    }
+    span{
+      display: block;
+      width: 100%;
+      height: 20px;
+      font-size: 16px;
+      line-height: 20px;
+      position: absolute;
+      left: 0;
+      top: 47px;
+    }
+  }
+}
+
+@media (max-width: 1366px){
+  .header{
+    h1{
+      padding-left: 30px;
+    }
+  }
+  .header-content{
+    margin-right: 30px;
+  }
+}
