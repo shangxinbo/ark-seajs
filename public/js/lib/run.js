@@ -1,7 +1,6 @@
 
 define(function (require) {
 
-    window.ENV = 'php';
     window.STATIC = '/js/';
 
     var commonDependences = [

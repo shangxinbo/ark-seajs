@@ -580,12 +580,9 @@ body {
 }
 .screening-assets li:first-child {
   margin-left: 0 !important;
-}
-
-.screening-assets li.checked .icon {
+}.screening-assets li.checked .icon {
   background-position: -15px 0;
 }
-
 .screening-time {
   width: 124px;
   height: 34px;

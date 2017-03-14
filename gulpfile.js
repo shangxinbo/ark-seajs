@@ -1,8 +1,4 @@
-/**
- * NAME 2016/7/4
- * DATE 2016/7/4
- * AUTHOR shangxinbo
- */
+
 'use strict'
 const gulp = require('gulp')
 const less = require('gulp-less')
