@@ -27,7 +27,7 @@ module.exports = app => {
                 for (let i in fields) {
                     data[i] = fields[i][0]
                 }
-                needle.post(baseURL + req.originalUrl.replace('/php', ''), data, { multipart: true }, function (error, response, body) {
+                needle.post(baseURL + req.originalUrl, data, { multipart: true }, function (error, response, body) {
                     if (error) {
                         res.send(error)
                     }
@@ -41,8 +41,8 @@ module.exports = app => {
     })
 
     app.use((req, res, next) => {
-        if (req.url.indexOf('php/') > 0) {
-            let url = baseURL + req.originalUrl.replace('/php', '')
+        if (req.headers['accept'].indexOf('json')>=0) {
+            let url = baseURL + req.originalUrl
             let data = Object.assign({}, req.body)
             request({
                 uri: url,
