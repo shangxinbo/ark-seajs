@@ -1,6 +1,6 @@
 seajs.use([
 	'dialog/popWindow',
-	'modules/common'
+	'base/common'
 ],function(PopWindow,ark){
 	//ark.serverError()
 });

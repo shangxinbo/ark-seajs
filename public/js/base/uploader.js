@@ -1,6 +1,6 @@
 define([
     'lib/plupload.full.min.js',
-    'modules/common'
+    'base/common'
 ], function (require, exports, module) {
 
     var defaults = {

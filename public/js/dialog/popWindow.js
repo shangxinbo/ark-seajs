@@ -5,12 +5,12 @@ define([
     'dialog/newCrowd',
     'dialog/newDis',
     'dialog/list',
-    'modules/common'
+    'base/common'
 ], function (require, exports, module) {
     var newCrowd = require('dialog/newCrowd')
     var newDis = require('dialog/newDis')
     var list = require('dialog/list')
-    var ark = require('modules/common')
+    var ark = require('base/common')
 
     $("body").on("click", "[data-dialog]", function () {
         var id = $(this).attr("data-dialog")

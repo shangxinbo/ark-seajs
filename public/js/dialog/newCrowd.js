@@ -1,9 +1,9 @@
 define([
-    'modules/uploader',
-    'modules/common'
+    'base/uploader',
+    'base/common'
 ], function (require, exports, module) {
-    var Uploader = require('modules/uploader');
-    var ark = require('modules/common')
+    var Uploader = require('base/uploader');
+    var ark = require('base/common')
 
     var
         dialog = $('#newCrowd'),

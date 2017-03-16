@@ -1,8 +1,8 @@
 define([
-    'modules/uploader'
+    'base/uploader'
 ], function (require, exports, module) {
-    var Uploader = require('modules/uploader');
-    var ark = require('modules/common');
+    var Uploader = require('base/uploader');
+    var ark = require('base/common');
     var
         dialog = $('#newDis'),
         fileName = $('#newDis input[name="name"]'),
