@@ -56,8 +56,6 @@ gulp.task('js', () => {
     //保证依赖关系，要有return
     return gulp.src('public/js/!(lib)/**/*.js')
         .pipe(plumber({ errorHandler: errorHandle }))
-        .pipe(replace('"/php', '"'))
-        .pipe(replace("'/php", "'"))
         .pipe(gulpif(release, uglify()))
         .pipe(gulpif(release, rev()))
         .pipe(gulp.dest(destPhpDir + 'js/'))
