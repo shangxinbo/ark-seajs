@@ -28,6 +28,15 @@ sea.js项目初始化的脚手架，包括模板引擎，mock数据，项目发�
 
 图中蓝色虚线内是任务并行阶段，红色部分为前端框架要处理的部分
 
+## 安装
+
+```
+git clone https://github.com/shangxinbo/seajs-init.git youproject
+cd youproject
+npm install 
+npm run start  //http://localhost:3000
+```
+
 ## 脚本
 
 `npm run start`
