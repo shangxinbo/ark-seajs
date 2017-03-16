@@ -1,7 +1,7 @@
 seajs.use([
-	STATIC + 'modules/common',
-	STATIC + 'lib/template',
-    STATIC + 'dialog/popWindow'
+	'modules/common',
+	'lib/template',
+    'dialog/popWindow'
 ],function(ark,template){
 	var items = JSON.parse(window.sessionStorage.errorData),
 		classification = getQuery('classification');

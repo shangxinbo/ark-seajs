@@ -9,7 +9,7 @@ define(function (require, exports, module) {
 	 *   @color5: #8946D6;
 	 */
 	var color = ['#0686B0', '#0670CA', '#3958DC', '#6452EF', '#8946D6'];
-	var ark = require(STATIC + 'modules/common');
+	var ark = require('modules/common');
 	var id = getQuery('id'),
 		cycle_id = getQuery('cycle_id'),
 		template_id = getQuery('template_id'),

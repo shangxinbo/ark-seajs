@@ -1,8 +1,8 @@
 seajs.use([
-    STATIC + 'modules/common',
-    STATIC + 'lib/template',
-    STATIC + 'modules/pages',
-    STATIC + 'dialog/popWindow'
+    'modules/common',
+    'lib/template',
+    'modules/pages',
+    'dialog/popWindow'
 ], function (ark, template, pages) {
 
     var currentPage = 1

@@ -2,11 +2,11 @@
  * Created by Administrator on 2016/9/6.
  */
 seajs.use([
-    STATIC + 'modules/pages',
-    STATIC + 'modules/common',
-    STATIC + 'modules/uploader',
-    STATIC + 'lib/template',
-    STATIC + 'dialog/popWindow'
+    'modules/pages',
+    'modules/common',
+    'modules/uploader',
+    'lib/template',
+    'dialog/popWindow'
 ], function (pages, ark, Uploader, template) {
     var id = getQuery('id');
     var project_id = getQuery('project_id')

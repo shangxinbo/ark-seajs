@@ -5,10 +5,10 @@
  */
 
 seajs.use([
-    STATIC + 'modules/common',
-    STATIC + 'modules/report',
-    STATIC + 'dialog/popWindow',
-    STATIC + 'lib/template'
+    'modules/common',
+    'modules/report',
+    'dialog/popWindow',
+    'lib/template'
 ], function (ark,report,PopWindow,template) {
     var crowd = sessionStorage.getItem('crowd');
     var tags = sessionStorage.getItem('tags');

@@ -1,8 +1,8 @@
 seajs.use([
-    STATIC + 'modules/common',
-    STATIC + 'lib/template',
-    STATIC + 'dialog/popWindow',
-    STATIC + 'lib/xUpload'
+    'modules/common',
+    'lib/template',
+    'dialog/popWindow',
+    'lib/xUpload'
 ], function (ark, template) {
 
     var apply_cycle_id = '';

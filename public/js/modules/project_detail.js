@@ -1,7 +1,7 @@
 define([
-    STATIC + 'modules/common'
+    'modules/common'
 ],function(require, exports, module){
-    var ark = require(STATIC + 'modules/common');
+    var ark = require('modules/common');
 
 	exports.showTable = function(data){
 		var list = {};

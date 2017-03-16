@@ -5,12 +5,12 @@
  */
 
 define([
-    STATIC + 'lib/handlebars',
-    STATIC + 'modules/functions',
-    STATIC + 'lib/template'
+    'lib/handlebars',
+    'modules/functions',
+    'lib/template'
 ], function (require, exports, module) {
 
-    var template = require(STATIC + 'lib/template');
+    var template = require('lib/template');
 
     module.exports = {
         alert: function (text, callback) {

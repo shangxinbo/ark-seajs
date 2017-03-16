@@ -8,9 +8,9 @@
  */
 
 seajs.use([
-    STATIC + 'modules/pages',
-    STATIC + 'modules/common',
-    STATIC + 'dialog/popWindow'
+    'modules/pages',
+    'modules/common',
+    'dialog/popWindow'
 ], function (pages, ark) {
     var source = $("#list").html();
     var template = Handlebars.compile(source);

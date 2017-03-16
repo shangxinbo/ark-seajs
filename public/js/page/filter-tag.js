@@ -1,8 +1,8 @@
 seajs.use([
-    STATIC + 'modules/filter-tag',
-    STATIC + 'lib/template',
-    STATIC + 'modules/common',
-    STATIC + 'dialog/popWindow'
+    'modules/filter-tag',
+    'lib/template',
+    'modules/common',
+    'dialog/popWindow'
 ],function(Filter,Template,Ark){
     $(function(){
 

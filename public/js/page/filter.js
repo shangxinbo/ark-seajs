@@ -1,11 +1,11 @@
 seajs.use([
-	STATIC + 'modules/fixedPro',
-	STATIC + 'modules/shoppingCart',
-	STATIC + 'modules/common',
-	STATIC + 'lib/kendo.core',
-	STATIC + 'lib/kendo.data.min',
-	STATIC + 'lib/kendo.treeview.min',
-	STATIC + 'dialog/popWindow'
+	'modules/fixedPro',
+	'modules/shoppingCart',
+	'modules/common',
+	'lib/kendo.core',
+	'lib/kendo.data.min',
+	'lib/kendo.treeview.min',
+	'dialog/popWindow'
 ],function(Fixed,Cart,ark){
 	var dataPath = "/data";
 var tidArr = {};//记录购物袋内标签id

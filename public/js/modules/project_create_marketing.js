@@ -1,5 +1,5 @@
 define([
-	STATIC + 'lib/jquery-ui.min'
+	'lib/jquery-ui.min'
 ],function(require, exports, module){
 	'use strict';
 	/**

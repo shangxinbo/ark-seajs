@@ -1,8 +1,8 @@
 define([
-    STATIC + 'lib/scrollBar',
-    STATIC + 'lib/template'
+    'lib/scrollBar',
+    'lib/template'
 ], function (require, exports, module) {
-    var template = require(STATIC + 'lib/template')
+    var template = require('lib/template')
     
     //custom options
     var options = {

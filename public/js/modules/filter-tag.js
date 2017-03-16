@@ -1,10 +1,10 @@
 define([
-    STATIC + 'lib/scrollBar',
-    STATIC + 'lib/template',
-    STATIC + 'modules/common'
+    'lib/scrollBar',
+    'lib/template',
+    'modules/common'
 ],function(require, exports, module){
-    var Ark = require(STATIC + 'modules/common'),
-        Template = require(STATIC + 'lib/template'),
+    var Ark = require('modules/common'),
+        Template = require('lib/template'),
         sequence = ['channel','area','action'],
         pageNum = 0,
         selectedLabel = {},

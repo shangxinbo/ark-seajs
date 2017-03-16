@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "node ./bin/www dev"
+    "dev": "node ./bin/www dev",
+    "build": "gulp",
+    "release": "gulp --release"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -15,13 +17,15 @@
     "glob": "^7.0.5",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.10",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
     "gulp-less": "^3.1.0",
-    "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-rev": "^7.1.0",
     "gulp-rev-collector": "^1.0.4",
+    "gulp-seajs-rev": "github:shangxinbo/gulp-seajs-rev",
     "gulp-swig": "^0.8.0",
     "gulp-uglify": "^1.5.4",
     "lodash": "^4.17.4",

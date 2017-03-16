@@ -1,5 +1,5 @@
 seajs.use([
-    STATIC + 'dialog/popWindow'
+    'dialog/popWindow'
 ], function () {
 	var id = getQuery('id');
 

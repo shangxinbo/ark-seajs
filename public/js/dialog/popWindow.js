@@ -2,15 +2,15 @@
  * 弹窗模块
  */
 define([
-    STATIC + 'dialog/newCrowd',
-    STATIC + 'dialog/newDis',
-    STATIC + 'dialog/list',
-    STATIC + 'modules/common'
+    'dialog/newCrowd',
+    'dialog/newDis',
+    'dialog/list',
+    'modules/common'
 ], function (require, exports, module) {
-    var newCrowd = require(STATIC + 'dialog/newCrowd')
-    var newDis = require(STATIC + 'dialog/newDis')
-    var list = require(STATIC + 'dialog/list')
-    var ark = require(STATIC + 'modules/common')
+    var newCrowd = require('dialog/newCrowd')
+    var newDis = require('dialog/newDis')
+    var list = require('dialog/list')
+    var ark = require('modules/common')
 
     $("body").on("click", "[data-dialog]", function () {
         var id = $(this).attr("data-dialog")

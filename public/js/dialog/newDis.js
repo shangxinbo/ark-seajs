@@ -1,8 +1,8 @@
 define([
-    STATIC + 'modules/uploader'
+    'modules/uploader'
 ], function (require, exports, module) {
-    var Uploader = require(STATIC + 'modules/uploader');
-    var ark = require(STATIC + 'modules/common');
+    var Uploader = require('modules/uploader');
+    var ark = require('modules/common');
     var
         dialog = $('#newDis'),
         fileName = $('#newDis input[name="name"]'),

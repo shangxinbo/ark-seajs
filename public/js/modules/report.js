@@ -5,15 +5,15 @@
  */
 
 define([
-    STATIC + 'lib/china',
-    STATIC + 'modules/common',
-    STATIC + 'lib/template'
+    'lib/china',
+    'modules/common',
+    'lib/template'
 ], function (require, exports, module) {
 
     'use strict';
 
-    var ark = require(STATIC + 'modules/common');
-    var template = require(STATIC + 'lib/template');
+    var ark = require('modules/common');
+    var template = require('lib/template');
 
     exports.sexChart = function (data) {
         if(!data) return false;

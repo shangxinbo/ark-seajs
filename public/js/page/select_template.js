@@ -1,7 +1,7 @@
 seajs.use([
-    STATIC + 'modules/common',
-    STATIC + 'lib/scrollBar',
-    STATIC + 'dialog/popWindow'
+    'modules/common',
+    'lib/scrollBar',
+    'dialog/popWindow'
 ], function (ark) {
     var id = getQuery("id");
     var type = getQuery('type');

@@ -2,10 +2,10 @@
  * Created by Administrator on 2017/2/17.
  */
 seajs.use([
-    STATIC + 'modules/pages',
-    STATIC + 'modules/common',
-    STATIC + 'lib/handlebars',
-    STATIC + 'dialog/popWindow'
+    'modules/pages',
+    'modules/common',
+    'lib/handlebars',
+    'dialog/popWindow'
 ], function (pages,ark) {
     var source = $("#list").html();
     var template = Handlebars.compile(source);

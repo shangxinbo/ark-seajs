@@ -5,10 +5,10 @@
  */
 
 seajs.use([
-    STATIC + 'modules/pages',
-    STATIC + 'modules/common',
-    STATIC + 'lib/handlebars',
-    STATIC + 'dialog/popWindow'
+    'modules/pages',
+    'modules/common',
+    'lib/handlebars',
+    'dialog/popWindow'
 ], function (pages, ark) {
 
 

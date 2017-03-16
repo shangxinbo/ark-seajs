@@ -1,8 +1,8 @@
 seajs.use([
-    STATIC + 'modules/common',
-    STATIC + 'lib/template',
-    STATIC + 'dialog/popWindow',
-    STATIC + 'lib/echarts.min'
+    'modules/common',
+    'lib/template',
+    'dialog/popWindow',
+    'lib/echarts.min'
 ], function (ark, template) {
     var color = ["red", "green", "brown", "blue", "violet"];
     var color_value = ['#E94D6A', '#09A88D', '#CC855A', '#398AD6', '#B84BC8'];

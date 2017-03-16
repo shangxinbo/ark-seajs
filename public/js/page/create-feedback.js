@@ -1,8 +1,8 @@
 seajs.use([
-	STATIC + 'modules/alter-feedback',
-	STATIC + 'modules/common',
-    STATIC + 'lib/template',
-	STATIC + 'dialog/popWindow'
+	'modules/alter-feedback',
+	'modules/common',
+    'lib/template',
+	'dialog/popWindow'
 ],function(Fb,ark,template){
 
 	var pid = getQuery('id');

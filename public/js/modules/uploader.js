@@ -1,6 +1,6 @@
 define([
-    STATIC + 'lib/plupload.full.min.js',
-    STATIC + 'modules/common'
+    'lib/plupload.full.min.js',
+    'modules/common'
 ], function (require, exports, module) {
 
     var defaults = {

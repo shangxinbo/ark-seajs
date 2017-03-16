@@ -1,7 +1,7 @@
 seajs.use([
-    STATIC + 'modules/project_create_marketing',
-    STATIC + 'modules/common',
-    STATIC + 'dialog/popWindow'
+    'modules/project_create_marketing',
+    'modules/common',
+    'dialog/popWindow'
 ], function (Proj, ark) {
     var user = ark.getUserInfo();
 
