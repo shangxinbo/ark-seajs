@@ -5,6 +5,7 @@
  */
 
 define([
+    'lib/handlebars',
     'modules/functions',
     'lib/template'
 ], function (require, exports, module) {
@@ -103,6 +104,12 @@ define([
         },
         serverError: function () {
             $('body').html(template('404', { title: "500", context: "糟糕了，服务器内部错误" }));
+        },
+        renderDom: function (jqObj, data) {
+            var tpl = jqObj.html();
+            var handle = Handlebars.compile(tpl);
+            var dom = handle(data);
+            return dom;
         },
         dissectFilters: function (obj) {
             if (obj) {

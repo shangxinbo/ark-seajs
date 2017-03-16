@@ -45,6 +45,13 @@ gulp.task('assets', () => {
         .pipe(gulp.dest(destPhpDir))
 })
 
+gulp.task('less',()=>{
+    gulp.src('public/less/*.less')
+        .pipe(plumber({ errorHandler: errorHandle }))
+        .pipe(less())
+        .pipe(gulp.dest('public/css/'))
+})
+
 gulp.task('js', () => {
     //第三方类库原样输出
     gulp.src('public/js/lib/**/*')
@@ -75,6 +82,8 @@ gulp.task('html', () => {
         .pipe(gulpif(release, gulp.dest(destPhpDir + '/views_tmp')))
         .pipe(gulpif(!release, gulp.dest(destPhpDir + '/views')))
 })
+
+gulp.task('watch', ['less'])
 
 gulp.task('default', ['assets', 'js', 'html'], function () {
     if (release) {

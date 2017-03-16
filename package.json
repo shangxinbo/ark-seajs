@@ -3,8 +3,8 @@
   "version": "1.2.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "node ./bin/www dev",
+    "start": "gulp watch && node ./bin/www",
+    "dev": "gulp watch && node ./bin/www dev",
     "build": "gulp",
     "release": "gulp --release"
   },
