@@ -1,0 +1,187 @@
+.input-warp {
+  width: 100%;
+}
+.input-warp li {
+  width: 100%;
+  min-height: 48px;
+  padding-left: 50px;
+  margin-top: 26px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-warp li:first-child {
+  margin-top: 0 !important;
+}
+.input-warp li span.tips {
+  display: inline-block;
+  width: 30px;
+  font-size: 14px;
+  color: #ACAEBA;
+  cursor: default;
+  position: absolute;
+  top: 16px;
+  right: -40px;
+}
+.input-warp li.disabled {
+  min-height: 0;
+}
+.input-warp li.disabled label {
+  height: 24px;
+  line-height: 24px;
+}
+.input-warp li.disabled .input-text {
+  height: 24px;
+  line-height: 24px;
+  padding: 0 0 0 13px;
+  border: none;
+  background-color: #FFF;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.input-warp label {
+  float: left;
+  width: 70px;
+  height: 48px;
+  padding-right: 18px;
+  font-size: 16px;
+  line-height: 48px;
+  color: #2D2D2D;
+  text-align: right;
+  position: absolute;
+  left: -38px;
+  top: 0;
+}
+.input-warp input,
+.input-warp textarea {
+  width: 100%;
+  font: 16px/21px "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei";
+  border: 1px solid #E3E5EB;
+  background-color: #F0F1F4;
+  color: #2D2D2D;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-warp input.error,
+.input-warp textarea.error {
+  border-color: #EDD4D9;
+  background-color: #F3E8EA;
+}
+.input-warp input.w195,
+.input-warp textarea.w195 {
+  width: 195px;
+  float: left;
+}
+.input-warp p {
+  display: none;
+  clear: both;
+  height: 16px;
+  padding-top: 8px;
+}
+.input-warp p.error {
+  display: block;
+}
+.input-warp p i {
+  display: inline-block;
+  vertical-align: top;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAADpTWrpTWrpTWrpTWrpTWrpTWrpTWrpTWrpTWrpTWr///9DzW5oAAAACnRSTlMA+deVjysG9L27O1TNDgAAAFNJREFUCNdjYGAIURRyZQCC5FVAYMbAwDYLxFiRwMC8CgwMGAJXrVq9a9UqUQYvCGMJgxaEsYhBCsJYCGMsB0qBwSK4Yrh2uIFwK+CWgp1RBHQGAL0DP4xIx5pjAAAAAElFTkSuQmCC") no-repeat 0 0;
+}
+.input-warp p span {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 8px;
+  font-size: 14px;
+  line-height: 17px;
+  overflow: hidden;
+  color: #E94D6A;
+}
+.input-warp p span:first-child {
+  padding-left: 0;
+}
+.input-text {
+  height: 48px;
+  padding: 13px;
+}
+.input-area {
+  height: 117px;
+  padding: 6px 13px;
+}
+.input-warp .select-warp {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+.input-warp .select-warp.w140 {
+  width: 140px;
+  margin-left: 15px;
+}
+.input-warp .select-warp p {
+  display: block !important;
+  background-color: #F0F1F4;
+  height: 46px;
+  padding: 0 35px 0 20px;
+  border: 1px solid #E3E5EB;
+  font-size: 16px;
+  line-height: 46px;
+  color: #2D2D2D;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+.input-warp .select-warp p:before {
+  display: block;
+  content: '';
+  width: 15px;
+  height: 9px;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJBAMAAAAfoWtkAAAAIVBMVEUAAACts8its8its8its8its8its8its8its8its8its8hXgI50AAAACnRSTlMAFdQQzGm5wzAl5af7MAAAAD5JREFUCNdjYBVgAAKzBoYoRSDN7JXAILQIKGSyxICBUUsRKOAMFAYKgQQYgEKaIAGQ0CqQAFiomAECREEEAKqNCYwuk0wYAAAAAElFTkSuQmCC") no-repeat 0 0;
+  position: absolute;
+  right: 14px;
+  top: 20px;
+}
+.input-warp .select-warp ul {
+  display: none;
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #E3E5EB;
+  padding: 10px 0;
+  background-color: #FFF;
+  position: absolute;
+  left: 0;
+  top: 47px;
+  z-index: 2;
+}
+.input-warp .select-warp.select-open ul {
+  display: block;
+}
+.input-warp .select-warp li {
+  min-height: 1px;
+  height: 28px;
+  padding: 0 20px;
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: 27px;
+  color: #2D2D2D;
+  cursor: pointer;
+}
+.input-warp .select-warp li:hover {
+  background-color: #DFDEE3;
+}
+@media (max-width: 1366px) {
+  .input-warp li {
+    margin-top: 20px;
+  }
+}
