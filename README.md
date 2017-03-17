@@ -67,7 +67,7 @@ npm run start  //http://localhost:3000
 
 #### 纯前端开发期
 
-FE将上一阶段的产出html分解成view模板，并使用swig引擎将模板关系处理好，将上一阶段的静态资源无配置使用，js使用sea.js模块化编写。在研发过程中如果有RESTful API 调用，则按照接口的路径在/api目录添加对应的mock数据，使用mockjs产生随机字段。使用`npm run start`是这一阶段的主要命令，执行后，node服务开启，监听3000端口，在浏览器中输入http://localhost:3000即可开发调试。这一阶段的产出主要是/public/js主程序文件和/views中模板文件。
+FE将上一阶段的产出html分解成view模板，并使用swig引擎将模板关系处理好，将上一阶段的静态资源无配置使用，js使用sea.js模块化编写。在研发过程中如果有RESTful API 调用，则按照接口的路径在/api目录添加对应的mock数据，使用mockjs产生随机字段。使用`npm run start`是这一阶段的主要命令，执行后，node服务开启，监听3000端口，在浏览器中输入 http://localhost:3000 即可开发调试。这一阶段的产出主要是/public/js主程序文件和/views中模板文件。
 
 #### 和后端联调期
 
