@@ -122,5 +122,7 @@ FE将上一阶段的产出html分解成view模板，并使用swig引擎将模板
 ## 引用
 
 [web 前后端分离的意义大吗?](https://www.zhihu.com/question/28207685)
+
 [Web前后端分离开发思路](https://segmentfault.com/a/1190000002413526)
+
 [淘宝前后端分离实践](http://2014.jsconf.cn/slides/herman-taobaoweb/#/)
